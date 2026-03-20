@@ -3,53 +3,58 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI in E-Commerce PPT - Premium Report Style</title>
+<title>AI in E-Commerce PPT - Ultimate Premium Report</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
 <style>
-    /* MASSIVE 1600x900 PREMIUM WHITE DATA REPORT THEME */
+    /* 1. MASSIVE 1600x900 & SOFT DOT-GRID BACKGROUND */
     html, body { background-color: #f1f5f9; margin: 0; padding: 0; width: 100%; height: 100%; }
-    body { font-family: 'Poppins', sans-serif; display: flex; flex-direction: column; align-items: center; padding: 20px 0; -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; color: #1e293b; }
+    body { font-family: 'Poppins', sans-serif; display: flex; flex-direction: column; align-items: center; padding: 20px 0; -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; color: #1e293b; counter-reset: pageNum; }
     
-    .slide { width: 1600px; height: 900px; background-color: #ffffff; margin-bottom: 30px; border-radius: 16px; box-shadow: 0 10px 35px rgba(0,0,0,0.08); box-sizing: border-box; padding: 80px 100px; overflow: hidden; position: relative; display: flex; flex-direction: column; }
+    .slide { width: 1600px; height: 900px; background-color: #ffffff; background-image: radial-gradient(#cbd5e1 2px, transparent 2px); background-size: 30px 30px; margin-bottom: 30px; border-radius: 16px; box-shadow: 0 10px 35px rgba(0,0,0,0.08); box-sizing: border-box; padding: 80px 100px; overflow: hidden; position: relative; display: flex; flex-direction: column; }
     
-    .title-slide { justify-content: center; align-items: center; text-align: center; border-top: 20px solid #2563eb; }
-    .title-slide h1 { font-size: 85px; margin-bottom: 20px; text-transform: uppercase; font-weight: 800; letter-spacing: 2px; line-height: 1.2; color: #0f172a; }
-    .title-slide p { font-size: 32px; color: #3b82f6; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
+    /* 2. AUTOMATED PREMIUM FOOTER */
+    .slide::after { counter-increment: pageNum; content: "Study of AI in E-Commerce  |  Page " counter(pageNum); position: absolute; bottom: 35px; left: 100px; font-size: 16px; color: #94a3b8; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; }
+    .title-slide::after { content: none; } /* Hides footer on title slide */
+
+    .title-slide { background-image: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); justify-content: center; align-items: center; text-align: center; border-top: none; }
+    .title-slide h1 { font-size: 85px; margin-bottom: 20px; text-transform: uppercase; font-weight: 800; letter-spacing: 2px; line-height: 1.2; color: #ffffff; }
+    .title-slide p { font-size: 32px; color: #bfdbfe; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
     
-    .chapter-slide { display: flex; flex-direction: column; justify-content: center; align-items: flex-start; padding-left: 150px; background-color: #f8fafc; border-left: 20px solid #2563eb; }
+    .chapter-slide { display: flex; flex-direction: column; justify-content: center; align-items: flex-start; padding-left: 150px; background-color: #f8fafc; background-image: radial-gradient(#cbd5e1 2px, transparent 2px); background-size: 30px 30px; border-left: 20px solid #2563eb; }
     .chapter-label { color: #3b82f6; font-size: 26px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 10px; }
     .chapter-title { color: #0f172a; font-size: 100px; font-weight: 800; margin: 0; line-height: 1.1; }
 
-    h2 { font-size: 55px; color: #1e3a8a; margin-top: 0; margin-bottom: 40px; display: inline-block; }
-    h3 { font-size: 36px; color: #0f172a; margin-top: 10px; margin-bottom: 15px; border-bottom: 3px solid #bfdbfe; padding-bottom: 5px; display: inline-block; }
+    h2 { font-size: 55px; color: #1e3a8a; margin-top: 0; margin-bottom: 40px; display: inline-block; background: white; padding: 0 15px 0 0; }
+    h3 { font-size: 36px; color: #0f172a; margin-top: 10px; margin-bottom: 15px; border-bottom: 3px solid #bfdbfe; padding-bottom: 5px; display: inline-block; background: white; }
     
-    .content-area { display: flex; gap: 70px; height: 100%; align-items: flex-start; }
+    .content-area { display: flex; gap: 70px; height: 100%; align-items: flex-start; position: relative; z-index: 2; }
     .col { flex: 1; display: flex; flex-direction: column; gap: 20px; }
     
     ul { margin: 0; padding-left: 40px; }
-    li { font-size: 26px; color: #334155; margin-bottom: 18px; line-height: 1.4; font-weight: 400; }
+    li { font-size: 26px; color: #334155; margin-bottom: 18px; line-height: 1.4; font-weight: 400; background: rgba(255,255,255,0.8); border-radius: 8px; }
     li strong { color: #0f172a; font-weight: 700; }
 
-    img { width: 100%; border-radius: 16px; object-fit: cover; box-shadow: 0 8px 25px rgba(0,0,0,0.1); }
+    /* 3. COHESIVE IMAGE TINTING (BLUE WASH) */
+    .img-tint { position: relative; width: 100%; border-radius: 16px; box-shadow: 0 8px 25px rgba(0,0,0,0.15); overflow: hidden; }
+    .img-tint::after { content: ''; position: absolute; inset: 0; background: rgba(37, 99, 235, 0.25); mix-blend-mode: multiply; pointer-events: none; }
+    .img-tint img { width: 100%; height: 100%; object-fit: cover; display: block; }
     .img-main { height: 550px; }
     
-    /* NEW: DATA REPORT STATISTIC BLOCKS */
+    /* 4. GRADIENT DATA REPORT STATISTIC BLOCKS */
     .stat-grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; margin-top: 20px; }
     .stat-grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px; margin-top: 20px; width: 100%; }
-    .stat-box { background: #f8fafc; padding: 35px; border-radius: 16px; border-top: 6px solid #2563eb; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
-    .stat-num { font-size: 75px; font-weight: 800; color: #1d4ed8; margin-bottom: 10px; line-height: 1; }
-    .stat-title { font-size: 24px; font-weight: 800; color: #0f172a; margin-bottom: 10px; }
+    .stat-box { background: rgba(255,255,255,0.95); padding: 35px; border-radius: 16px; border-top: 6px solid #2563eb; box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
+    .stat-num { font-size: 75px; font-weight: 800; margin-bottom: 10px; line-height: 1; background: linear-gradient(135deg, #1e3a8a 0%, #60a5fa 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .stat-title { font-size: 24px; font-weight: 800; color: #0f172a; margin-bottom: 10px; display: flex; align-items: center; gap: 10px; }
     .stat-text { font-size: 20px; color: #475569; line-height: 1.4; }
     
     .btn { display: block; width: 350px; margin: 0 auto 30px auto; padding: 20px; text-align: center; background: #2563eb; color: white; border: none; border-radius: 50px; font-size: 24px; font-weight: 700; cursor: pointer; box-shadow: 0 5px 20px rgba(37, 99, 235, 0.4); }
 
-    /* CRITICAL OVERLAP FIX & MARGIN NUKE FOR MOBILE PRINTING */
+    /* CRITICAL OVERLAP FIX & MARGIN NUKE */
     @media print {
         @page { size: 1600px 900px; margin: 0 !important; }
         html, body { background-color: #ffffff !important; display: block !important; margin: 0 !important; padding: 0 !important; }
-        .slide { 
-            background-color: #ffffff !important; display: block !important; width: 1600px !important; height: 900px !important; max-height: 900px !important; margin: 0 !important; padding: 80px 100px !important; border-radius: 0 !important; box-shadow: none !important; page-break-after: always !important; break-after: page !important; page-break-inside: avoid !important; 
-        }
+        .slide { background-color: #ffffff !important; display: block !important; width: 1600px !important; height: 900px !important; max-height: 900px !important; margin: 0 !important; padding: 80px 100px !important; border-radius: 0 !important; box-shadow: none !important; page-break-after: always !important; break-after: page !important; page-break-inside: avoid !important; }
         .title-slide, .chapter-slide { display: flex !important; } 
         .content-area { display: flex !important; height: auto !important; }
         .stat-grid-4, .stat-grid-2 { display: grid !important; }
@@ -83,7 +88,7 @@
                 <li>Al has become a powerful tool that improves efficiency, innovation, and customer satisfaction.</li>
             </ul>
         </div>
-        <div class="col"><img class="img-main" src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&q=80"></div>
+        <div class="col"><div class="img-tint img-main"><img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&q=80"></div></div>
     </div>
 </div>
 
@@ -98,7 +103,7 @@
                 <li>By understanding what customers want, businesses provide highly personalized shopping.</li>
             </ul>
         </div>
-        <div class="col"><img class="img-main" src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80"></div>
+        <div class="col"><div class="img-tint img-main"><img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80"></div></div>
     </div>
 </div>
 
@@ -115,7 +120,7 @@
                 <li>This study focuses on how Al is used and the benefits it offers to both.</li>
             </ul>
         </div>
-        <div class="col"><img class="img-main" src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?auto=format&fit=crop&w=800&q=80"></div>
+        <div class="col"><div class="img-tint img-main"><img src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?auto=format&fit=crop&w=800&q=80"></div></div>
     </div>
 </div>
 
@@ -158,7 +163,7 @@
                 <li>It helps businesses compete in the growing online market.</li>
             </ul>
         </div>
-        <div class="col"><img class="img-main" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80"></div>
+        <div class="col"><div class="img-tint img-main"><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80"></div></div>
     </div>
 </div>
 
@@ -178,7 +183,7 @@
                 <li>These studies provide the essential background and foundation for the current research.</li>
             </ul>
         </div>
-        <div class="col"><img class="img-main" src="https://images.unsplash.com/photo-1532012197267-da84d127e765?auto=format&fit=crop&w=800&q=80"></div>
+        <div class="col"><div class="img-tint img-main"><img src="https://images.unsplash.com/photo-1532012197267-da84d127e765?auto=format&fit=crop&w=800&q=80"></div></div>
     </div>
 </div>
 
@@ -270,7 +275,7 @@
                 <li>Overall, Al makes online shopping smarter, faster, and more convenient.</li>
             </ul>
         </div>
-        <div class="col"><img class="img-main" src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80"></div>
+        <div class="col"><div class="img-tint img-main"><img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80"></div></div>
     </div>
 </div>
 
@@ -316,7 +321,7 @@
                 <li>Speeds up payments, order tracking, and returns.</li>
             </ul>
         </div>
-        <div class="col"><img class="img-main" src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=800&q=80"></div>
+        <div class="col"><div class="img-tint img-main"><img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=800&q=80"></div></div>
     </div>
 </div>
 
@@ -398,14 +403,14 @@
                 <li>The study uses Primary Data and Secondary Data.</li>
                 <li><strong>Primary Data:</strong> Collected through questionnaires via online forms. Survey conducted among regular e-commerce users. Questions based on customer satisfaction and Al features.</li>
                 <li><strong>Secondary Data:</strong> 
-                    <ul style="padding-left: 20px; margin-top: 10px;">
+                    <ul style="padding-left: 20px; margin-top: 10px; background: none;">
                         <li>Websites & Online articles</li>
                         <li>News reports & Books</li>
                     </ul>
                 </li>
             </ul>
         </div>
-        <div class="col"><img class="img-main" src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=800&q=80"></div>
+        <div class="col"><div class="img-tint img-main"><img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=800&q=80"></div></div>
     </div>
 </div>
 <div class="slide chapter-slide">
@@ -415,22 +420,26 @@
 
 <div class="slide">
     <h2>Who are the Respondents?</h2>
-    <p style="font-size: 24px; color: #475569; margin-bottom: 20px;">Insight: The data primarily reflects the opinions of a tech-savvy, younger generation.</p>
+    <p style="font-size: 24px; color: #475569; margin-bottom: 20px; background: white; padding-right: 20px;">Insight: The data primarily reflects the opinions of a tech-savvy, younger generation.</p>
     <div class="stat-grid-4">
         <div class="stat-box">
             <div class="stat-num">88%</div>
+            <div class="stat-title">👥 Age Group</div>
             <div class="stat-text">Young adults concentrated in the 18-30 age group.</div>
         </div>
         <div class="stat-box">
             <div class="stat-num">71.3%</div>
+            <div class="stat-title">👩 Gender Base</div>
             <div class="stat-text">A strong female majority participated in the survey.</div>
         </div>
         <div class="stat-box">
             <div class="stat-num">83.3%</div>
+            <div class="stat-title">🎓 Occupation</div>
             <div class="stat-text">The sample is heavily dominated by active students.</div>
         </div>
         <div class="stat-box">
             <div class="stat-num">47.3%</div>
+            <div class="stat-title">📚 Education</div>
             <div class="stat-text">Currently pursuing or hold Undergraduate degrees.</div>
         </div>
     </div>
@@ -441,17 +450,17 @@
     <div class="stat-grid-2">
         <div class="stat-box">
             <div class="stat-num">84%</div>
-            <div class="stat-title">High Awareness</div>
+            <div class="stat-title">💡 High Awareness</div>
             <div class="stat-text">An overwhelming majority are actively aware that Al is utilized across their favorite online shopping platforms.</div>
         </div>
         <div class="stat-box">
             <div class="stat-num">61.3%</div>
-            <div class="stat-title">Positive Impact</div>
+            <div class="stat-title">🌟 Positive Impact</div>
             <div class="stat-text">Believe that the integration of Al demonstrably improves their overall shopping experience and convenience.</div>
         </div>
         <div class="stat-box">
             <div class="stat-num">52%</div>
-            <div class="stat-title">The Familiarity Gap</div>
+            <div class="stat-title">🤷 The Familiarity Gap</div>
             <div class="stat-text">Remain "Neutral" regarding their familiarity with specific Al tools, suggesting they recognize Al's presence without understanding the mechanics.</div>
         </div>
     </div>
@@ -462,17 +471,17 @@
     <div class="stat-grid-2">
         <div class="stat-box">
             <div class="stat-num">60%</div>
-            <div class="stat-title">Find Recommendations Useful</div>
+            <div class="stat-title">👍 Find it Useful</div>
             <div class="stat-text">A majority of users find personalized product recommendations beneficial to their shopping journey.</div>
         </div>
         <div class="stat-box" style="border-top-color: #f59e0b;">
-            <div class="stat-num">38%</div>
-            <div class="stat-title">Room for Improvement</div>
+            <div class="stat-num" style="background: linear-gradient(135deg, #d97706, #fbbf24); -webkit-background-clip: text;">38%</div>
+            <div class="stat-title">📈 Needs Improvement</div>
             <div class="stat-text">Remain neutral, indicating a distinct gap in personalization accuracy that platforms need to bridge.</div>
         </div>
         <div class="stat-box" style="grid-column: span 2;">
             <div class="stat-num">60.7%</div>
-            <div class="stat-title">Neutral on Accuracy</div>
+            <div class="stat-title">⚖️ Neutral on Accuracy</div>
             <div class="stat-text">Are neutral regarding the precision of Al suggestions. The current consensus is that Al recommendations are acceptable but not yet impressive for the majority.</div>
         </div>
     </div>
@@ -480,26 +489,26 @@
 
 <div class="slide">
     <h2>Key Benefits of Al in E-commerce</h2>
-    <p style="font-size: 24px; color: #475569; margin-bottom: 20px;">According to respondents, Al provides value in:</p>
+    <p style="font-size: 24px; color: #475569; margin-bottom: 20px; background: white; padding-right: 20px;">According to respondents, Al provides value in:</p>
     <div class="stat-grid-4">
         <div class="stat-box">
             <div class="stat-num">68.7%</div>
-            <div class="stat-title">Time Efficiency</div>
+            <div class="stat-title">⏱️ Time Efficiency</div>
             <div class="stat-text">Value Al primarily for saving time during shopping.</div>
         </div>
         <div class="stat-box">
             <div class="stat-num">56.7%</div>
-            <div class="stat-title">Faster Search</div>
+            <div class="stat-title">🔍 Faster Search</div>
             <div class="stat-text">Users prioritize faster product searches over other features.</div>
         </div>
         <div class="stat-box">
             <div class="stat-num">52.7%</div>
-            <div class="stat-title">Better Personalization</div>
+            <div class="stat-title">🎯 Personalization</div>
             <div class="stat-text">Tailored results and custom feeds are highly valued.</div>
         </div>
         <div class="stat-box">
             <div class="stat-num">42.7%</div>
-            <div class="stat-title">Customer Support</div>
+            <div class="stat-title">💬 Support Bots</div>
             <div class="stat-text">See Al as a vital tool for improved support via chatbots.</div>
         </div>
     </div>
@@ -511,19 +520,22 @@
         <div class="col">
             <h3>Preferred Platforms & Habits</h3>
             <div class="stat-box">
-                <div class="stat-text"><strong>Top Platforms:</strong> Flipkart leads at 64%, followed by Meesho (56%), Myntra (49%), and Amazon (45.3%).</div>
-                <div class="stat-text" style="margin-top: 15px;"><strong>Shopping Frequency:</strong> 52.7% shop occasionally, while 28% shop monthly.</div>
-                <div class="stat-text" style="margin-top: 15px;"><strong>Loyalty:</strong> 81.4% are likely to recommend their preferred platform.</div>
+                <div class="stat-title">🛒 Top Platforms</div>
+                <div class="stat-text">Flipkart leads at 64%, followed by Meesho (56%), Myntra (49%), and Amazon (45.3%).</div>
+                <div class="stat-title" style="margin-top: 20px;">📅 Shopping Frequency</div>
+                <div class="stat-text">52.7% shop occasionally, while 28% shop monthly.</div>
+                <div class="stat-title" style="margin-top: 20px;">⭐ Brand Loyalty</div>
+                <div class="stat-text">81.4% are likely to recommend their preferred platform.</div>
             </div>
         </div>
         <div class="col">
             <h3>Factors Driving Satisfaction</h3>
             <div class="stat-box">
-                <div class="stat-title">Priority 1: Product Quality (73.3%)</div>
-                <div class="stat-text">This remains the undisputed king of satisfaction.</div>
-                <div class="stat-title" style="margin-top: 20px;">Priority 2: Delivery Speed (52.7%)</div>
-                <div class="stat-text">Timely service is critical for a positive experience.</div>
-                <div class="stat-title" style="margin-top: 20px;">Secondary Factors</div>
+                <div class="stat-title">🏆 Priority 1: Product Quality</div>
+                <div class="stat-text">At 73.3%, this remains the undisputed king of satisfaction.</div>
+                <div class="stat-title" style="margin-top: 20px;">🚚 Priority 2: Delivery Speed</div>
+                <div class="stat-text">At 52.7%, timely service is critical for a positive experience.</div>
+                <div class="stat-title" style="margin-top: 20px;">🎁 Secondary Factors</div>
                 <div class="stat-text">Customer Support (40.7%) and Offers (34%).</div>
             </div>
         </div>
@@ -535,17 +547,17 @@
     <div class="stat-grid-2">
         <div class="stat-box">
             <div class="stat-num">73%</div>
-            <div class="stat-title">Transaction Security</div>
+            <div class="stat-title">🛡️ Transaction Security</div>
             <div class="stat-text">Believe Al is faster than humans at detecting fraud. However, 53.3% have an "Average" understanding of Al security tools.</div>
         </div>
         <div class="stat-box" style="border-top-color: #ef4444;">
-            <div class="stat-num">40.4%</div>
-            <div class="stat-title">Low Personal Trust</div>
+            <div class="stat-num" style="background: linear-gradient(135deg, #b91c1c, #f87171); -webkit-background-clip: text;">40.4%</div>
+            <div class="stat-title">🔒 Low Personal Trust</div>
             <div class="stat-text">Do not feel confident sharing personal data with platforms, highlighting the Data Privacy Paradox.</div>
         </div>
         <div class="stat-box" style="grid-column: span 2; border-top-color: #10b981;">
-            <div class="stat-num">50%</div>
-            <div class="stat-title">Data for Improvement</div>
+            <div class="stat-num" style="background: linear-gradient(135deg, #047857, #34d399); -webkit-background-clip: text;">50%</div>
+            <div class="stat-title">📊 Data for Improvement</div>
             <div class="stat-text">Despite privacy concerns, half of users are comfortable with data collection if it tangibly improves their shopping experience.</div>
         </div>
     </div>
@@ -556,17 +568,17 @@
     <div class="stat-grid-4">
         <div class="stat-box" style="grid-column: span 2;">
             <div class="stat-num">54.1%</div>
-            <div class="stat-title">Smart Price Comparisons</div>
+            <div class="stat-title">💰 Smart Price Comparisons</div>
             <div class="stat-text">Desire deeply integrated, automated tools to compare prices across the web.</div>
         </div>
         <div class="stat-box">
             <div class="stat-num">44.5%</div>
-            <div class="stat-title">Virtual Try-Ons</div>
+            <div class="stat-title">🕶️ Virtual Try-Ons</div>
             <div class="stat-text">Want immersive, AR-driven try-ons to reduce returns.</div>
         </div>
         <div class="stat-box">
             <div class="stat-num">37.0%</div>
-            <div class="stat-title">Instant Chatbots</div>
+            <div class="stat-title">🤖 Instant Chatbots</div>
             <div class="stat-text">Expect highly conversational chatbots for 24/7 service.</div>
         </div>
     </div>
@@ -582,18 +594,18 @@
     <div class="content-area">
         <div class="col">
             <h3>Strategic Takeaway</h3>
-            <div class="stat-box">
+            <div class="stat-box" style="padding: 25px;">
                 <div class="stat-text">Al is universally accepted as a vital tool for speed and operational efficiency.</div>
-                <div class="stat-text" style="margin-top: 20px;">However, to convert "Neutral" users into highly "Satisfied" brand advocates, platforms must urgently focus on elevating recommendation accuracy while building absolute transparency around user data security.</div>
+                <div class="stat-text" style="margin-top: 15px;">However, to convert "Neutral" users into highly "Satisfied" brand advocates, platforms must urgently focus on elevating recommendation accuracy while building absolute transparency around user data security.</div>
             </div>
-            <h3 style="margin-top: 30px;">Suggestions for Businesses</h3>
+            <h3 style="margin-top: 20px;">Suggestions for Businesses</h3>
             <ul>
                 <li>Improve data privacy and transparency.</li>
-                <li>Small businesses should start with basic Al tools (chatbots, recommendations).</li>
+                <li>Small businesses should start with basic Al tools.</li>
                 <li>Upgrade Al systems and train skilled professionals.</li>
             </ul>
         </div>
-        <div class="col"><img class="img-main" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80"></div>
+        <div class="col"><div class="img-tint" style="height: 600px;"><img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" style="height: 100%;"></div></div>
     </div>
 </div>
 
