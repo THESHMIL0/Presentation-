@@ -3,48 +3,52 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI in E-Commerce PPT - Premium Dark Theme</title>
+<title>AI in E-Commerce PPT - Full Dark Theme</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
 <style>
-    /* MASSIVE 1600x900 LAYOUT */
-    body { font-family: 'Poppins', sans-serif; background: #cbd5e1; margin: 0; padding: 20px; display: flex; flex-direction: column; align-items: center; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    /* MASSIVE 1600x900 FULL DARK THEME */
+    body { font-family: 'Poppins', sans-serif; background: #cbd5e1; margin: 0; padding: 20px; display: flex; flex-direction: column; align-items: center; -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; color: #f8fafc; }
     
-    .slide { width: 1600px; height: 900px; background: white; margin-bottom: 30px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.15); box-sizing: border-box; padding: 80px 100px; overflow: hidden; position: relative; display: flex; flex-direction: column; }
+    /* ALL SLIDES ARE NOW DARK NAVY */
+    .slide { width: 1600px; height: 900px; background-color: #0b1120; margin-bottom: 30px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.3); box-sizing: border-box; padding: 80px 100px; overflow: hidden; position: relative; display: flex; flex-direction: column; }
     
-    /* THEME 1: BLUE GRADIENT TITLE SLIDE */
-    .title-slide { background: linear-gradient(135deg, #0b1120 0%, #1e3a8a 100%); color: white; justify-content: center; align-items: center; text-align: center; }
-    .title-slide h1 { font-size: 85px; margin-bottom: 20px; text-transform: uppercase; font-weight: 800; letter-spacing: 2px; line-height: 1.2; }
+    .title-slide { background-image: linear-gradient(135deg, #0b1120 0%, #1e3a8a 100%); justify-content: center; align-items: center; text-align: center; }
+    .title-slide h1 { font-size: 85px; margin-bottom: 20px; text-transform: uppercase; font-weight: 800; letter-spacing: 2px; line-height: 1.2; color: #ffffff; }
     .title-slide p { font-size: 32px; color: #93c5fd; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
     
-    /* THEME 2: EXACT MATCH FOR YOUR UPLOADED CHAPTER SCREENSHOT */
-    .chapter-slide { background: #0b1120; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; padding-left: 150px; }
+    .chapter-slide { display: flex; flex-direction: column; justify-content: center; align-items: flex-start; padding-left: 150px; }
     .chapter-label { color: #3b82f6; font-size: 26px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 10px; }
     .chapter-title { color: #ffffff; font-size: 100px; font-weight: 800; margin: 0; line-height: 1.1; }
 
-    /* BIG CONTENT STYLES */
-    h2 { font-size: 55px; color: #0b1120; margin-top: 0; margin-bottom: 40px; border-bottom: 4px solid #3b82f6; padding-bottom: 10px; display: inline-block; }
-    h3 { font-size: 38px; color: #1e3a8a; margin-top: 10px; margin-bottom: 20px; }
+    /* TEXT COLORS UPDATED FOR DARK BACKGROUND */
+    h2 { font-size: 55px; color: #ffffff; margin-top: 0; margin-bottom: 40px; border-bottom: 4px solid #3b82f6; padding-bottom: 10px; display: inline-block; }
+    h3 { font-size: 38px; color: #93c5fd; margin-top: 10px; margin-bottom: 20px; }
     
     .content-area { display: flex; gap: 70px; height: 100%; align-items: flex-start; }
     .col { flex: 1; }
     
     ul { margin: 0; padding-left: 40px; }
-    li { font-size: 28px; color: #1e293b; margin-bottom: 22px; line-height: 1.5; font-weight: 400; }
-    li strong { color: #0b1120; font-weight: 700; }
+    li { font-size: 28px; color: #e2e8f0; margin-bottom: 22px; line-height: 1.5; font-weight: 400; }
+    li strong { color: #60a5fa; font-weight: 700; }
 
     /* BIG PICTURES */
-    img { width: 100%; border-radius: 16px; object-fit: cover; box-shadow: 0 8px 25px rgba(0,0,0,0.1); }
+    img { width: 100%; border-radius: 16px; object-fit: cover; box-shadow: 0 8px 25px rgba(0,0,0,0.5); }
     .img-main { height: 550px; }
     .img-half { height: 320px; margin-bottom: 20px; }
     
     .btn { display: block; width: 350px; margin: 0 auto 30px auto; padding: 20px; text-align: center; background: #2563eb; color: white; border: none; border-radius: 50px; font-size: 24px; font-weight: 700; cursor: pointer; box-shadow: 0 5px 20px rgba(37, 99, 235, 0.4); }
 
-    /* PDF PRINT FIX FOR HUGE RESOLUTION */
+    /* PRINT FIX: FORCES DARK BACKGROUND IN PDF */
     @media print {
         @page { size: 1600px 900px; margin: 0 !important; }
-        body { background: white !important; padding: 0 !important; margin: 0 !important; display: block !important; }
-        .slide { width: 1600px !important; height: 900px !important; margin: 0 !important; padding: 80px 100px !important; border-radius: 0 !important; box-shadow: none !important; page-break-after: always !important; display: flex !important; page-break-inside: avoid !important; }
+        body { background: #0b1120 !important; padding: 0 !important; margin: 0 !important; display: block !important; -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+        .slide { background-color: #0b1120 !important; width: 1600px !important; height: 900px !important; margin: 0 !important; padding: 80px 100px !important; border-radius: 0 !important; box-shadow: none !important; page-break-after: always !important; display: flex !important; page-break-inside: avoid !important; }
+        .title-slide { background-image: linear-gradient(135deg, #0b1120 0%, #1e3a8a 100%) !important; }
         .no-print { display: none !important; }
+        h2 { color: #ffffff !important; border-bottom: 4px solid #3b82f6 !important; }
+        h3 { color: #93c5fd !important; }
+        li { color: #e2e8f0 !important; }
+        li strong { color: #60a5fa !important; }
     }
 </style>
 </head>
