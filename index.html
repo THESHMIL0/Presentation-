@@ -3,441 +3,544 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI E-Commerce PPT</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <title>AI in E-Commerce PPT</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { background: #f1f5f9; display: flex; flex-direction: column; align-items: center; gap: 20px; font-family: 'Inter', sans-serif; -webkit-print-color-adjust: exact; }
-        .slide { width: 1280px; height: 720px; background: #fff; display: flex; flex-direction: column; padding: 60px 80px; position: relative; overflow: hidden; page-break-after: always; }
-        .title-slide { background: #0f172a; color: #fff; justify-content: center; align-items: center; text-align: center; }
-        .chapter-slide { background: #0f172a; color: #fff; justify-content: center; padding: 100px; }
-        .line { width: 80px; height: 6px; background: #38bdf8; margin-bottom: 20px; }
-        h1 { font-size: 60px; font-family: 'Playfair Display'; }
-        h2 { font-size: 40px; color: #0f172a; border-bottom: 2px solid #e2e8f0; padding-bottom: 10px; margin-bottom: 20px; }
-        .blue { color: #38bdf8; }
-        .list { list-style: none; }
-        .list li { font-size: 22px; margin-bottom: 15px; padding-left: 25px; position: relative; line-height: 1.4; }
-        .list li::before { content: '›'; position: absolute; left: 0; color: #0ea5e9; font-weight: 700; font-size: 28px; }
-        .img-box { width: 100%; height: 400px; border-radius: 10px; overflow: hidden; margin-top: 10px; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: #f3f4f6; font-family: 'Poppins', sans-serif; display: flex; flex-direction: column; align-items: center; padding: 40px 0; gap: 40px; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+        
+        .slide { width: 1280px; height: 720px; background: white; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); padding: 60px 80px; position: relative; overflow: hidden; display: flex; flex-direction: column; }
+        
+        @media print {
+            @page { size: 1280px 720px; margin: 0; }
+            body { padding: 0; margin: 0; background: white; gap: 0; }
+            .slide { margin: 0; border-radius: 0; box-shadow: none; page-break-after: always; page-break-inside: avoid; }
+            .slide:last-child { page-break-after: auto; }
+            .no-print { display: none !important; }
+        }
+
+        .title-slide { background: linear-gradient(135deg, #0f172a, #2563eb); color: white; justify-content: center; align-items: center; text-align: center; }
+        .chapter-slide { background: #0f172a; color: white; justify-content: center; align-items: flex-start; padding: 100px 120px; }
+        
+        h1 { font-size: 64px; margin-bottom: 20px; letter-spacing: 1px; }
+        h2 { font-size: 42px; color: #0f172a; border-bottom: 3px solid #2563eb; padding-bottom: 10px; margin-bottom: 30px; }
+        h3 { font-size: 32px; color: #2563eb; margin-bottom: 20px; }
+        .chapter-title { font-size: 72px; color: white; border: none; padding: 0; margin: 0; }
+        
+        .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; height: 100%; }
+        .two-col-img { grid-template-columns: 1.2fr 0.8fr; }
+        
+        ul { list-style: none; }
+        li { font-size: 22px; color: #374151; margin-bottom: 16px; line-height: 1.4; padding-left: 30px; position: relative; }
+        li::before { content: '■'; position: absolute; left: 0; color: #3b82f6; font-size: 18px; top: 4px; }
+        li strong { color: #0f172a; }
+
+        .img-box { background: #e5e7eb; border-radius: 12px; height: 450px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
         .img-box img { width: 100%; height: 100%; object-fit: cover; }
-        .split { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
-        @media print { @page { size: 1280px 720px; margin: 0; } body { gap: 0; } .slide { box-shadow: none; } }
+
+        .btn { position: fixed; top: 20px; right: 20px; background: #2563eb; color: white; padding: 15px 30px; font-size: 20px; font-weight: bold; border: none; border-radius: 8px; cursor: pointer; z-index: 1000; box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4); }
     </style>
 </head>
-<body onload="setTimeout(() => { window.print(); }, 1000);">
+<body>
 
-<div class="slide title-slide">
-    <h1>RESEARCH PRESENTATION</h1>
-    <h3 class="blue">STUDY OF AI IN E-COMMERCE</h3>
-</div>
+    <button class="btn no-print" onclick="window.print()">📥 Download PDF</button>
 
-<div class="slide chapter-slide">
-    <div class="line"></div>
-    <p class="blue">CHAPTER 1</p>
-    <h1>Introduction</h1>
-</div>
-
-<div class="slide">
-    <h2>Introduction</h2>
-    <div class="split">
-        <ul class="list">
-            <li>AI is essential in the digital era.</li>
-            <li>Enables learning, reasoning, and decision-making.</li>
-            <li>Used in healthcare, finance, and education.</li>
-            <li>Transformed the E-commerce sector.</li>
-            <li>Improves efficiency and customer satisfaction.</li>
-        </ul>
-        <div class="img-box"><img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600"></div>
+    <div class="slide title-slide">
+        <h1>RESEARCH PRESENTATION</h1>
+        <p style="font-size: 32px; color: #93c5fd;">STUDY OF ARTIFICIAL INTELLIGENCE IN E-COMMERCE</p>
     </div>
-</div>
 
-<div class="slide">
-    <h2>Introduction (Cont.)</h2>
-    <ul class="list">
-        <li>E-commerce involves buying/selling over the internet.</li>
-        <li>Platforms like Amazon, Flipkart, Myntra changed shopping.</li>
-        <li>AI uses ML, NLP, and Computer Vision to analyze behavior.</li>
-        <li>Provides personalized shopping experiences.</li>
-        <li>Suggests products based on past purchases.</li>
-        <li>Improves service via chatbots and inventory management.</li>
-        <li>Identifies fraud and secures transactions.</li>
-    </ul>
-</div>
-
-<div class="slide">
-    <h2>AI in Indian E-Commerce</h2>
-    <div class="split">
-        <ul class="list">
-            <li>India has a fast-growing digital economy.</li>
-            <li>Affordable smartphones boosted online shopping.</li>
-            <li>Digital India initiatives support growth.</li>
-            <li>Companies reach urban and rural customers via AI.</li>
-            <li>AI manages data and 24/7 multi-language support.</li>
-        </ul>
-        <div class="img-box"><img src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?w=600"></div>
+    <div class="slide chapter-slide">
+        <h3 style="color: #60a5fa;">CHAPTER 1</h3>
+        <h2 class="chapter-title">Introduction</h2>
     </div>
-</div>
 
-<div class="slide">
-    <h2>Key Objectives</h2>
-    <ul class="list">
-        <li>Study AI's role in personalized shopping.</li>
-        <li>Assess future AI opportunities in e-commerce.</li>
-        <li>Analyze customer satisfaction levels.</li>
-        <li>Identify major roles of AI.</li>
-        <li>Provide integration suggestions.</li>
-    </ul>
-</div>
-
-<div class="slide">
-    <h2>Scope of the Study</h2>
-    <ul class="list">
-        <li>Studies customer behavior and searches.</li>
-        <li>Provides personalized product recommendations.</li>
-        <li>AI Chatbots for instant query resolution.</li>
-        <li>Fraud detection for secure transactions.</li>
-        <li>Voice and visual search technology.</li>
-    </ul>
-</div>
-
-<div class="slide">
-    <h2>Importance of Study</h2>
-    <ul class="list">
-        <li>Changes how businesses operate and consumers shop.</li>
-        <li>Relevant to India's growing digital economy.</li>
-        <li>Crucial for improving business efficiency.</li>
-        <li>Helps businesses compete in the online market.</li>
-    </ul>
-</div>
-
-<div class="slide chapter-slide">
-    <div class="line"></div>
-    <p class="blue">CHAPTER 2</p>
-    <h1>Review of Literature</h1>
-</div>
-
-<div class="slide">
-    <h2>Literature Review Intro</h2>
-    <ul class="list">
-        <li>Examines previous studies on AI in e-commerce.</li>
-        <li>Focuses on chatbots and recommendation systems.</li>
-        <li>Provides background for current research.</li>
-    </ul>
-</div>
-
-<div class="slide">
-    <h2>Anli Suresh (2022)</h2>
-    <ul class="list">
-        <li>Studied AI's influence on consumer preferences.</li>
-        <li>Based on 100 respondents.</li>
-        <li>Voice shopping and virtual assistants affect decisions.</li>
-        <li>AI makes shopping personalized and convenient.</li>
-    </ul>
-</div>
-
-<div class="slide">
-    <h2>Richard Fedorko (2022)</h2>
-    <ul class="list">
-        <li>Studied AI's role in online consumer behavior.</li>
-        <li>Uses recommendation systems and predictive analytics.</li>
-        <li>Helps companies target customers effectively.</li>
-        <li>Improves efficiency in online shopping.</li>
-    </ul>
-</div>
-
-<div class="slide">
-    <h2>Saikat Gochhait (2019)</h2>
-    <div class="split">
-        <ul class="list">
-            <li>Discussed tech-driven buying behavior changes.</li>
-            <li>AI analyzes large data sets to predict preferences.</li>
-            <li>Improves marketing strategies and decisions.</li>
-        </ul>
-        <div class="img-box"><img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600"></div>
+    <div class="slide">
+        <h2>Introduction</h2>
+        <div class="two-col two-col-img">
+            <div>
+                <ul>
+                    <li>Artificial Intelligence (AI) is one of the most important technologies in the digital era.</li>
+                    <li>Al enables machines to perform tasks that usually require human intelligence, like learning, reasoning, and decision-making.</li>
+                    <li>Al is being used in many sectors such as healthcare, education, finance, and entertainment.</li>
+                    <li>However, one of the major sectors transformed by Al is E-commerce.</li>
+                    <li>Al has become a powerful tool that improves efficiency, innovation, and customer satisfaction in online shopping.</li>
+                </ul>
+            </div>
+            <div class="img-box"><img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80"></div>
+        </div>
     </div>
-</div>
 
-<div class="slide">
-    <h2>Vishal D. Soni (2020)</h2>
-    <ul class="list">
-        <li>AI is vital in modern computer science.</li>
-        <li>Used for automation and customer analysis.</li>
-        <li>Chatbots improve marketing strategies.</li>
-    </ul>
-</div>
-
-<div class="slide">
-    <h2>Nitin Rane (2024)</h2>
-    <ul class="list">
-        <li>AI/ML improves business decision-making.</li>
-        <li>Used for predictive analytics and inventory.</li>
-        <li>Optimizes pricing and marketing strategies.</li>
-    </ul>
-</div>
-
-<div class="slide">
-    <h2>Anjan Surani (2022)</h2>
-    <ul class="list">
-        <li>Linked AI to e-commerce growth.</li>
-        <li>Helps businesses understand customer needs.</li>
-        <li>Strengthens business-customer relationships.</li>
-    </ul>
-</div>
-
-<div class="slide chapter-slide">
-    <div class="line"></div>
-    <p class="blue">CHAPTER 3</p>
-    <h1>Role of AI</h1>
-</div>
-
-<div class="slide">
-    <h2>3.1 Introduction</h2>
-    <ul class="list">
-        <li>AI is used in smartphones, homes, and cars.</li>
-        <li>Transforming Indian E-commerce.</li>
-        <li>Chatbots and voice search enhance communication.</li>
-    </ul>
-</div>
-
-<div class="slide">
-    <h2>3.2 Customer Experience</h2>
-    <div class="split">
-        <ul class="list">
-            <li>Faster and easier online shopping.</li>
-            <li>24/7 chatbot support.</li>
-            <li>Detects fake reviews to build trust.</li>
-        </ul>
-        <div class="img-box"><img src="https://images.unsplash.com/photo-1533750516457-a7f992034fec?w=600"></div>
+    <div class="slide">
+        <h2>Introduction (Continued)</h2>
+        <div class="two-col">
+            <div>
+                <ul>
+                    <li>E-commerce, or electronic commerce, refers to buying and selling goods and services over the internet.</li>
+                    <li>Over the years, online platforms have changed traditional shopping methods.</li>
+                    <li>With platforms like Amazon, Flipkart, Myntra, and Meesho, customers can shop anytime and from anywhere.</li>
+                    <li>As the global e-commerce industry grows rapidly, businesses are looking for new ways to attract and retain customers.</li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <li>This is where Artificial Intelligence plays a major role. Al technologies, such as machine learning, natural language processing (NLP), and computer vision, are used to analyze customer data and behavior.</li>
+                    <li>By understanding what customers want, businesses can provide a highly personalized shopping experience.</li>
+                    <li>For example, Al can suggest products based on a customer's past purchases or searches.</li>
+                </ul>
+            </div>
+        </div>
     </div>
-</div>
 
-<div class="slide">
-    <h2>3.2.2 Sales & Conversion</h2>
-    <ul class="list">
-        <li>Shows right products at the right time.</li>
-        <li>Reduces abandoned carts via reminders.</li>
-        <li>Chatbots solve doubts instantly.</li>
-    </ul>
-</div>
-
-<div class="slide">
-    <h2>3.2.3 Personalization</h2>
-    <ul class="list">
-        <li>Analyzes search history and interests.</li>
-        <li>Shows personalized recommendations.</li>
-        <li>Makes customers feel valued and understood.</li>
-    </ul>
-</div>
-<div class="slide">
-    <h2>3.2.4 Efficiency</h2>
-    <ul class="list">
-        <li>Automates data entry and scheduling.</li>
-        <li>Reduces human errors and saves time.</li>
-        <li>Allows focus on creative tasks.</li>
-    </ul>
-</div>
-
-<div class="slide">
-    <h2>3.3.5 Cost Reduction</h2>
-    <div class="split">
-        <ul class="list">
-            <li>Reduces manual labor costs.</li>
-            <li>Better inventory and demand management.</li>
-            <li>Predicts equipment problems early.</li>
-        </ul>
-        <div class="img-box"><img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=600"></div>
+    <div class="slide">
+        <h2>Introduction (Continued)</h2>
+        <div class="two-col two-col-img">
+            <div>
+                <ul>
+                    <li>Moreover, Al improves customer service through chatbots, helps businesses manage their inventory, and provides advanced search options like voice and image search.</li>
+                    <li>It also helps in identifying fraud and making secure online transactions.</li>
+                </ul>
+            </div>
+            <div class="img-box"><img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&q=80"></div>
+        </div>
     </div>
-</div>
 
-<div class="slide">
-    <h2>3.3.6 Data Analytics</h2>
-    <ul class="list">
-        <li>Quickly analyzes large amounts of data.</li>
-        <li>Identifies trends humans might miss.</li>
-        <li>Leads to smarter, faster decisions.</li>
-    </ul>
-</div>
-
-<div class="slide">
-    <h2>3.3.7 Customer Support</h2>
-    <ul class="list">
-        <li>Instant support via virtual assistants.</li>
-        <li>Handles repetitive queries for order status.</li>
-        <li>Learns and improves over time.</li>
-    </ul>
-</div>
-
-<div class="slide">
-    <h2>Research Methodology</h2>
-    <ul class="list">
-        <li>Uses Primary and Secondary Data.</li>
-        <li>Primary data from user questionnaires.</li>
-        <li>Survey among regular e-commerce users.</li>
-        <li>Focus on satisfaction and AI features.</li>
-    </ul>
-</div>
-
-<div class="slide chapter-slide">
-    <div class="line"></div>
-    <p class="blue">CHAPTER 4</p>
-    <h1>Data Analysis</h1>
-</div>
-
-<div class="slide">
-    <h2>Demographic Profile</h2>
-    <ul class="list">
-        <li><strong>Age:</strong> 88% are in 18-30 group.</li>
-        <li><strong>Gender:</strong> 71.3% female majority.</li>
-        <li><strong>Occupation:</strong> 83.3% Students.</li>
-        <li><strong>Education:</strong> Mostly Under Graduates.</li>
-    </ul>
-</div>
-
-<div class="slide">
-    <h2>AI Awareness</h2>
-    <div class="split">
-        <ul class="list">
-            <li>84% aware of AI in shopping.</li>
-            <li>61.3% see positive impact on experience.</li>
-            <li>52% neutral on specific tool familiarity.</li>
-        </ul>
-        <div class="img-box"><img src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=600"></div>
+    <div class="slide">
+        <h2>Al in Indian E-Commerce</h2>
+        <div class="two-col two-col-img">
+            <div>
+                <ul>
+                    <li>India has one of the fastest-growing digital economies in the world.</li>
+                    <li>With a massive increase in internet users and the availability of affordable smartphones, millions of Indians are now shopping online.</li>
+                    <li>The government's initiatives like Digital India have also supported this digital growth.</li>
+                    <li>In this competitive market, e-commerce companies in India are using Al to reach both urban and rural customers.</li>
+                    <li>Al helps businesses in India manage huge amounts of customer data, improve marketing strategies, and provide 24/7 support in multiple local languages.</li>
+                    <li>This study focuses on how Al is used in the e-commerce sector, the benefits it offers to both</li>
+                </ul>
+            </div>
+            <div class="img-box"><img src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?auto=format&fit=crop&q=80"></div>
+        </div>
     </div>
-</div>
 
-<div class="slide">
-    <h2>Personalized Data</h2>
-    <ul class="list">
-        <li>60% find recommendations useful.</li>
-        <li>60.7% neutral on suggestion accuracy.</li>
-        <li>Indicates room for AI improvement.</li>
-    </ul>
-</div>
-
-<div class="slide">
-    <h2>Key AI Benefits</h2>
-    <ul class="list">
-        <li><strong>Efficiency:</strong> 68.7% value time saving.</li>
-        <li><strong>Search:</strong> 56.7% prioritize speed.</li>
-        <li><strong>Support:</strong> 42.7% value chatbots.</li>
-    </ul>
-</div>
-
-<div class="slide">
-    <h2>Preferred Platforms</h2>
-    <ul class="list">
-        <li>Flipkart (64%), Meesho (56%), Myntra (49%).</li>
-        <li>52.7% shop occasionally.</li>
-        <li>81.4% likely to recommend platform.</li>
-    </ul>
-</div>
-
-<div class="slide">
-    <h2>Satisfaction Factors</h2>
-    <ul class="list">
-        <li>Product Quality (73.3%) is top priority.</li>
-        <li>Delivery Speed (52.7%) is critical.</li>
-        <li>Customer Support (40.7%) follows.</li>
-    </ul>
-</div>
-
-<div class="slide">
-    <h2>Transaction Security</h2>
-    <div class="split">
-        <ul class="list">
-            <li>73% believe AI is faster at fraud detection.</li>
-            <li>46% rate AI as "Effective".</li>
-            <li>Confidence in combined alerts/blocking.</li>
-        </ul>
-        <div class="img-box"><img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=600"></div>
+    <div class="slide">
+        <h2>Objectives & Scope of the Study</h2>
+        <div class="two-col">
+            <div>
+                <h3>Key Objectives</h3>
+                <ul>
+                    <li>To study the role of Al in personalized shopping experiences.</li>
+                    <li>To assess future opportunities of Al in e-commerce.</li>
+                    <li>To analyze customer satisfaction with e-commerce websites.</li>
+                    <li>To identify major roles of Al in e-commerce.</li>
+                    <li>To provide suggestions for effective Al integration.</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Scope of the Study</h3>
+                <ul>
+                    <li>Al studies customer behavior such as searches and purchases.</li>
+                    <li>Al provides personalized product recommendations.</li>
+                    <li>Al chatbots help customers by answering queries instantly.</li>
+                    <li>Al ensures secure transactions through fraud detection.</li>
+                    <li>Al improves product search using voice and visual technology.</li>
+                </ul>
+            </div>
+        </div>
     </div>
-</div>
 
-<div class="slide">
-    <h2>Privacy Paradox</h2>
-    <ul class="list">
-        <li>40.4% lack trust sharing data.</li>
-        <li>50% share data if service improves.</li>
-        <li>Trust remains a primary challenge.</li>
-    </ul>
-</div>
-
-<div class="slide">
-    <h2>Future Expectations</h2>
-    <ul class="list">
-        <li>Smart Price Comparisons (54.1%).</li>
-        <li>Immersive Virtual Try-ons (44.5%).</li>
-        <li>Instant Chatbots (37%).</li>
-    </ul>
-</div>
-
-<div class="slide chapter-slide">
-    <div class="line"></div>
-    <p class="blue">CHAPTER 5</p>
-    <h1>Findings & Conclusion</h1>
-</div>
-
-<div class="slide">
-    <h2>General Findings</h2>
-    <ul class="list">
-        <li>AI improves platform functionality.</li>
-        <li>Users are primarily tech-savvy students.</li>
-        <li>AI makes shopping faster and easier.</li>
-    </ul>
-</div>
-
-<div class="slide">
-    <h2>Habits Findings</h2>
-    <div class="split">
-        <ul class="list">
-            <li>Product quality matters most.</li>
-            <li>Delivery speed affects satisfaction.</li>
-            <li>Very few are unhappy with AI services.</li>
+    <div class="slide">
+        <h2>Importance of the Study</h2>
+        <h3>Why This Study Matters</h3>
+        <ul>
+            <li>Studying Artificial Intelligence in Indian E-commerce is important.</li>
+            <li>It changes how businesses operate and how consumers shop online.</li>
+            <li>India has a fast-growing digital economy and internet users.</li>
+            <li>Al plays a key role in improving efficiency and customer experience.</li>
+            <li>It helps businesses compete in the growing online market.</li>
         </ul>
-        <div class="img-box"><img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600"></div>
     </div>
-</div>
 
-<div class="slide">
-    <h2>Study Limitations</h2>
-    <ul class="list">
-        <li>Based on 150 respondents in Goa.</li>
-        <li>May not represent larger populations.</li>
-        <li>Potential personal bias in surveys.</li>
-    </ul>
-</div>
+    <div class="slide chapter-slide">
+        <h3 style="color: #60a5fa;">CHAPTER 2</h3>
+        <h2 class="chapter-title">Review of Literature</h2>
+        <ul style="margin-top: 40px;">
+            <li style="color: white; font-size: 26px;">The literature review examines previous studies on the use of Artificial Intelligence in e-commerce.</li>
+            <li style="color: white; font-size: 26px;">It shows how Al technologies like chatbots and recommendation systems help businesses understand customer behavior and improve the online shopping experience.</li>
+            <li style="color: white; font-size: 26px;">These studies provide the background for the current research.</li>
+        </ul>
+    </div>
 
-<div class="slide">
-    <h2>General Suggestions</h2>
-    <ul class="list">
-        <li>Improve transparency and privacy.</li>
-        <li>Use secure systems and monitor AI.</li>
-        <li>Combine AI with human support.</li>
-    </ul>
-</div>
+    <div class="slide">
+        <h2>Literature Review: Studies 1 & 2</h2>
+        <div class="two-col">
+            <div>
+                <h3>Review: Anli Suresh (2022) - Key Findings</h3>
+                <ul>
+                    <li>Studied the influence of Al on consumer preferences.</li>
+                    <li>Data collected from 100 respondents.</li>
+                    <li>Al tools like voice shopping and virtual assistants affect buying decisions.</li>
+                    <li>Al makes online shopping more personalized and convenient.</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Review: Richard Fedorko et al. (2022) - Key Findings</h3>
+                <ul>
+                    <li>Studied the role of Al in influencing online consumer behavior.</li>
+                    <li>Al uses recommendation systems and predictive analytics.</li>
+                    <li>Helps companies target customers with relevant products.</li>
+                    <li>Improves efficiency and personalization in online shopping.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
 
-<div class="slide">
-    <h2>Business Suggestions</h2>
-    <ul class="list">
-        <li>Small businesses can use basic AI tools.</li>
-        <li>Focus on chatbots and recommendations.</li>
-        <li>Improve logistics using AI.</li>
-    </ul>
-</div>
+    <div class="slide">
+        <h2>Literature Review: Studies 3 & 4</h2>
+        <div class="two-col">
+            <div>
+                <h3>Review: Saikat Gochhait (2019)</h3>
+                <ul>
+                    <li>Discussed changes in customer buying behavior with technology.</li>
+                    <li>Al helps analyze large customer data sets.</li>
+                    <li>Businesses can predict consumer preferences.</li>
+                    <li>Improves marketing strategies and decision-making.</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Review: Vishal Dineshkumar Soni (2020) - Key Findings</h3>
+                <ul>
+                    <li>Al is an important technology in modern computer science.</li>
+                    <li>Used in e-commerce for automation and customer analysis.</li>
+                    <li>Chatbots and predictive analytics improve marketing strategies.</li>
+                    <li>Provides personalized shopping experiences.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
 
-<div class="slide">
-    <h2>Conclusion</h2>
-    <ul class="list">
-        <li>AI is transforming the industry.</li>
-        <li>Drastically improves personalization.</li>
-        <li>Impact is highly positive overall.</li>
-    </ul>
-</div>
+    <div class="slide">
+        <h2>Literature Review: Studies 5 & 6</h2>
+        <div class="two-col">
+            <div>
+                <h3>Review: Nitin Rane et al. (2024) - Key Findings</h3>
+                <ul>
+                    <li>Al and machine learning improve decision-making in businesses.</li>
+                    <li>Used for predictive analytics and inventory management.</li>
+                    <li>Helps optimize pricing and marketing strategies.</li>
+                    <li>Improves overall efficiency of e-commerce systems.</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Review: Anjan Surani (2022)</h3>
+                <ul>
+                    <li>Explained the connection between Al and e-commerce growth.</li>
+                    <li>Al technologies help businesses understand customer needs.</li>
+                    <li>Improves services and online shopping experience.</li>
+                    <li>Strengthens relationships between businesses and customers.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
 
-<div class="slide title-slide">
-    <h1>THANK YOU</h1>
-    <p class="blue">QUESTIONS?</p>
-</div>
+    <div class="slide chapter-slide">
+        <h3 style="color: #60a5fa;">CHAPTER 3</h3>
+        <h2 class="chapter-title">Role and Significance of Al in E-Commerce</h2>
+        <h3 style="margin-top: 40px; color: white;">3.1 Introduction</h3>
+        <ul>
+            <li style="color: white; font-size: 24px;">Artificial Intelligence (AI) is a powerful technology used in many daily devices like smartphones, smart homes, and cars.</li>
+            <li style="color: white; font-size: 24px;">Al is transforming the E-commerce industry in India.</li>
+            <li style="color: white; font-size: 24px;">It helps companies understand customer behavior and preferences.</li>
+            <li style="color: white; font-size: 24px;">Chatbots and voice search help customers communicate easily.</li>
+            <li style="color: white; font-size: 24px;">Overall, Al makes online shopping smarter, faster, and more convenient.</li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h2>3.2 Impact: Improvement in Customer Experience</h2>
+        <div class="two-col two-col-img">
+            <div>
+                <ul>
+                    <li>Al makes online shopping faster and easier.</li>
+                    <li>Provides personalized product recommendations.</li>
+                    <li>24/7 chatbots give quick customer support.</li>
+                    <li>Improves search results even with spelling mistakes.</li>
+                    <li>Speeds up payments, order tracking, and returns.</li>
+                    <li>Helps detect fake reviews and build trust.</li>
+                </ul>
+            </div>
+            <div class="img-box"><img src="https://images.unsplash.com/photo-1533750516457-a7f992034fec?auto=format&fit=crop&q=80"></div>
+        </div>
+    </div>
+
+    <div class="slide">
+        <h2>Sales and Personalization</h2>
+        <div class="two-col">
+            <div>
+                <h3>3.2.2 Increase in Sale and Conversion Rates</h3>
+                <ul>
+                    <li>Al helps businesses understand customer needs and preferences.</li>
+                    <li>Shows the right products to the right customers at the right time.</li>
+                    <li>Sends reminders and discounts to reduce abandoned carts.</li>
+                    <li>Chatbots assist customers instantly and solve their doubts.</li>
+                    <li>Improves search results and product suggestions.</li>
+                </ul>
+            </div>
+            <div>
+                <h3>3.2.3 Enhanced Personalization</h3>
+                <ul>
+                    <li>Al helps businesses understand individual customer preferences.</li>
+                    <li>It analyzes search history, purchases, and interests.</li>
+                    <li>Shows personalized product recommendations.</li>
+                    <li>Makes customers feel valued and understood.</li>
+                    <li>Creates a more engaging and satisfying shopping experience.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="slide">
+        <h2>Efficiency and Costs</h2>
+        <div class="two-col">
+            <div>
+                <h3>3.2.4 Operational Efficiency and Automation</h3>
+                <ul>
+                    <li>Al helps in data entry, scheduling, and inventory tracking.</li>
+                    <li>Provides automatic responses to basic customer queries.</li>
+                    <li>Reduces human errors and saves time.</li>
+                    <li>Allows employees to focus on creative and important tasks.</li>
+                    <li>Helps businesses predict future needs and detect problems early.</li>
+                    <li>Makes business operations faster, smoother, and more efficient.</li>
+                </ul>
+            </div>
+            <div>
+                <h3>3.3.5 Reduction in Costs</h3>
+                <ul>
+                    <li>Al helps reduce labor costs and the need for large manual teams.</li>
+                    <li>Minimizes human errors, saving time and money.</li>
+                    <li>Improves decision-making using data analysis.</li>
+                    <li>Helps in better inventory and demand management.</li>
+                    <li>Predicts equipment problems early, avoiding costly repairs.</li>
+                    <li>Helps businesses achieve more with fewer resources.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="slide">
+        <h2>Decision Making & Support</h2>
+        <div class="two-col">
+            <div>
+                <h3>3.3.6 Better Decision Making Through Data Analytics</h3>
+                <ul>
+                    <li>Al helps analyze large amounts of data quickly.</li>
+                    <li>Identifies patterns and trends that humans may miss.</li>
+                    <li>Predicts future demand, risks, and market trends.</li>
+                    <li>Assists in pricing, product launches, and service improvements.</li>
+                    <li>Provides accurate and timely insights.</li>
+                    <li>Leads to smarter, faster, and more confident decision-making.</li>
+                </ul>
+            </div>
+            <div>
+                <h3>3.3.7 Faster and Smarter Customer Support</h3>
+                <ul>
+                    <li>Al provides instant customer support through chatbots and virtual assistants.</li>
+                    <li>Customers get quick solutions for simple issues like order status, passwords, and product information.</li>
+                    <li>Al handles repetitive queries, allowing human agents to focus on complex problems.</li>
+                    <li>Al learns from past interactions and improves responses over time.</li>
+                    <li>Better and faster service improves customer experience and business efficiency.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="slide">
+        <h2>Research Methodology</h2>
+        <div class="two-col two-col-img">
+            <div>
+                <ul>
+                    <li>The study uses Primary Data and Secondary Data.</li>
+                    <li>Primary data collected through questionnaires.</li>
+                    <li>Survey conducted among regular e-commerce users.</li>
+                    <li>Questions based on customer satisfaction and Al features.</li>
+                    <li>Data collected through online forms and interactions.</li>
+                </ul>
+            </div>
+            <div class="img-box"><img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&q=80"></div>
+        </div>
+    </div>
+
+    <div class="slide chapter-slide">
+        <h3 style="color: #60a5fa;">CHAPTER 4</h3>
+        <h2 class="chapter-title">Data Analysis & Interpretation</h2>
+        <h3 style="margin-top: 40px; color: white;">Demographic Profile of Respondents</h3>
+        <ul>
+            <li style="color: white; font-size: 24px;"><strong>Age:</strong> Predominantly young adults; 88% are in the 18-30 age group.</li>
+            <li style="color: white; font-size: 24px;"><strong>Gender:</strong> A strong female majority at 71.3%.</li>
+            <li style="color: white; font-size: 24px;"><strong>Occupation:</strong> The sample is heavily dominated by Students (83.3%).</li>
+            <li style="color: white; font-size: 24px;"><strong>Education:</strong> Most are Under Graduates (47.3%) or in Higher Secondary (38%).</li>
+            <li style="color: white; font-size: 24px;"><strong>Insight:</strong> The data primarily reflects the opinions of a tech-savvy, younger generation.</li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h2>Al Awareness & General Perception</h2>
+        <div class="two-col two-col-img">
+            <div>
+                <ul>
+                    <li><strong>High Awareness:</strong> 84% of respondents are aware that Al is used in online shopping platforms.</li>
+                    <li><strong>Positive Impact:</strong> 61.3% believe Al improves their overall shopping experience.</li>
+                    <li><strong>Familiarity Gap:</strong> While awareness is high, 52% remain Neutral about their familiarity with specific Al tools.</li>
+                </ul>
+            </div>
+            <div class="img-box"><img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80"></div>
+        </div>
+    </div>
+
+    <div class="slide">
+        <h2>Data: Personalized Recommendations</h2>
+        <ul>
+            <li><strong>Utility:</strong> 60% of users find personalized recommendations useful.</li>
+            <li><strong>Neutrality:</strong> 38% remain neutral, indicating room for Al to become more accurate.</li>
+            <li><strong>Satisfaction:</strong> 60.7% are neutral regarding the accuracy of Al suggestions.</li>
+            <li><strong>Takeaway:</strong> Al recommendations are acceptable but not yet impressive for the majority.</li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h2>Data: Key Benefits of Al in E-commerce</h2>
+        <h3>According to respondents, Al provides value in:</h3>
+        <div class="two-col two-col-img">
+            <div>
+                <ul>
+                    <li><strong>Time Efficiency:</strong> 68.7% value Al for saving time.</li>
+                    <li><strong>Faster Search:</strong> Users prioritize faster product searches (56.7%).</li>
+                    <li><strong>Better Personalization:</strong> Tailored results are valued by 52.7%.</li>
+                    <li><strong>Customer Support:</strong> 42.7% see Al as a tool for improved support via chatbots.</li>
+                </ul>
+            </div>
+            <div class="img-box"><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80"></div>
+        </div>
+    </div>
+
+    <div class="slide">
+        <h2>Preferred Platforms & Shopping Habits</h2>
+        <ul>
+            <li><strong>Top Platforms:</strong> Flipkart leads at 64%, followed by Meesho (56%), Myntra (49%), and Amazon (45.3%).</li>
+            <li><strong>Shopping Frequency:</strong> 52.7% shop occasionally, while 28% shop monthly.</li>
+            <li><strong>Loyalty:</strong> 81.4% are likely to recommend their preferred platform.</li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h2>Factors Driving Customer Satisfaction</h2>
+        <ul>
+            <li><strong>Priority 1 - Product Quality (73.3%):</strong> This remains the undisputed king of satisfaction.</li>
+            <li><strong>Priority 2 - Delivery Speed (52.7%):</strong> Timely service is critical for a positive experience.</li>
+            <li><strong>Secondary Factors:</strong> Customer Support (40.7%) and Offers/Recommendations (34%) follow in importance.</li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h2>Data: Al & Transaction Security</h2>
+        <div class="two-col two-col-img">
+            <div>
+                <ul>
+                    <li><strong>Efficiency:</strong> 73% believe Al is faster than humans at detecting fraud.</li>
+                    <li><strong>Effectiveness:</strong> 46% rate Al as "Effective" in detecting suspicious activities.</li>
+                    <li><strong>Trust Drivers:</strong> Confidence is highest with a combined approach (alerts, blocking, detection).</li>
+                    <li><strong>Knowledge Gap:</strong> 53.3% have only an "Average" understanding of Al security.</li>
+                </ul>
+            </div>
+            <div class="img-box"><img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&q=80"></div>
+        </div>
+    </div>
+
+    <div class="slide">
+        <h2>The Data Privacy Paradox</h2>
+        <ul>
+            <li><strong>Low Personal Trust:</strong> 40.4% do not feel confident sharing personal data with platforms.</li>
+            <li><strong>Data for Improvement:</strong> Despite concerns, 50% are comfortable with data collection if it improves their experience.</li>
+            <li><strong>Insight:</strong> Consumers will trade some data for better service, but overall trust remains low.</li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h2>Future Expectations</h2>
+        <h3>Most Desired Features:</h3>
+        <ul>
+            <li>Smart Price Comparisons (54.1%)</li>
+            <li>Immersive Virtual Try-ons (44.5%)</li>
+            <li>Instant Chatbots (37%)</li>
+        </ul>
+    </div>
+
+    <div class="slide chapter-slide">
+        <h3 style="color: #60a5fa;">CHAPTER 5</h3>
+        <h2 class="chapter-title">Findings, Suggestions & Conclusion</h2>
+        <h3 style="margin-top: 40px; color: white;">General Findings</h3>
+        <ul>
+            <li style="color: white; font-size: 24px;">Al is clearly improving how e-commerce platforms work.</li>
+            <li style="color: white; font-size: 24px;">Most users are young (18-30), mainly students.</li>
+            <li style="color: white; font-size: 24px;">People are aware that Al is used in online shopping.</li>
+            <li style="color: white; font-size: 24px;">Al makes shopping faster, easier, and more convenient.</li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h2>Experience Findings & Limitations</h2>
+        <div class="two-col">
+            <div>
+                <h3>Experience & Habits Findings</h3>
+                <ul>
+                    <li>Features like recommendations and chatbots save time.</li>
+                    <li>Customers are mostly satisfied with their experience.</li>
+                    <li>Very few people are unhappy with e-commerce services.</li>
+                    <li>Shopping is usually occasional or monthly (planned).</li>
+                    <li>Product quality matters the most to customers.</li>
+                    <li>Delivery speed and support also affect satisfaction.</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Limitations of the Study</h3>
+                <ul>
+                    <li>Study based on only 150 respondents in Goa.</li>
+                    <li>Results may not represent a larger population.</li>
+                    <li>Majority respondents were young students.</li>
+                    <li>Survey responses may include personal bias.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="slide">
+        <h2>Suggestions & Conclusion</h2>
+        <div class="two-col">
+            <div>
+                <h3>Suggestions for Improvement</h3>
+                <ul>
+                    <li>Improve data privacy and transparency.</li>
+                    <li>Use secure payment systems and monitor Al regularly.</li>
+                    <li>Combine Al with human support for better service.</li>
+                    <li>Upgrade Al systems and train skilled professionals.</li>
+                </ul>
+                <h3 style="margin-top: 20px;">Suggestions for Businesses</h3>
+                <ul>
+                    <li>Small businesses can start with basic Al tools.</li>
+                    <li>Focus on chatbots and recommendation systems.</li>
+                    <li>Add voice search and smarter features in future.</li>
+                    <li>Improve logistics and delivery using Al.</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Conclusion</h3>
+                <ul>
+                    <li>Al is completely transforming the e-commerce industry.</li>
+                    <li>It drastically improves personalization and overall customer experience.</li>
+                    <li>Helps businesses understand their customers better.</li>
+                    <li>Overall impact of Al is highly positive despite challenges regarding data privacy and implementation.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
 
 </body>
 </html>
