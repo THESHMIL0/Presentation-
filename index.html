@@ -3,59 +3,55 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI in E-Commerce PPT - Ultimate Premium Report</title>
+<title>AI in E-Commerce PPT - Premium Report Style</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
 <style>
-    /* 1. MASSIVE 1600x900 & SOFT DOT-GRID BACKGROUND */
+    /* MASSIVE 1600x900 PREMIUM WHITE DATA REPORT THEME */
     html, body { background-color: #f1f5f9; margin: 0; padding: 0; width: 100%; height: 100%; }
-    body { font-family: 'Poppins', sans-serif; display: flex; flex-direction: column; align-items: center; padding: 20px 0; -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; color: #1e293b; counter-reset: pageNum; }
+    body { font-family: 'Poppins', sans-serif; display: flex; flex-direction: column; align-items: center; padding: 20px 0; -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; color: #1e293b; }
     
-    .slide { width: 1600px; height: 900px; background-color: #ffffff; background-image: radial-gradient(#cbd5e1 2px, transparent 2px); background-size: 30px 30px; margin-bottom: 30px; border-radius: 16px; box-shadow: 0 10px 35px rgba(0,0,0,0.08); box-sizing: border-box; padding: 80px 100px; overflow: hidden; position: relative; display: flex; flex-direction: column; }
+    .slide { width: 1600px; height: 900px; background-color: #ffffff; margin-bottom: 30px; border-radius: 16px; box-shadow: 0 10px 35px rgba(0,0,0,0.08); box-sizing: border-box; padding: 80px 100px; overflow: hidden; position: relative; display: flex; flex-direction: column; }
     
-    /* 2. AUTOMATED PREMIUM FOOTER */
-    .slide::after { counter-increment: pageNum; content: "Study of AI in E-Commerce  |  Page " counter(pageNum); position: absolute; bottom: 35px; left: 100px; font-size: 16px; color: #94a3b8; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; }
-    .title-slide::after { content: none; } /* Hides footer on title slide */
-
-    .title-slide { background-image: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); justify-content: center; align-items: center; text-align: center; border-top: none; }
-    .title-slide h1 { font-size: 85px; margin-bottom: 20px; text-transform: uppercase; font-weight: 800; letter-spacing: 2px; line-height: 1.2; color: #ffffff; }
-    .title-slide p { font-size: 32px; color: #bfdbfe; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
+    /* NEW TITLE SLIDE: PURE WHITE WITH A HERO IMAGE */
+    .title-slide { background-color: #ffffff; border-top: 20px solid #2563eb; flex-direction: row; align-items: center; justify-content: space-between; text-align: left; }
     
-    .chapter-slide { display: flex; flex-direction: column; justify-content: center; align-items: flex-start; padding-left: 150px; background-color: #f8fafc; background-image: radial-gradient(#cbd5e1 2px, transparent 2px); background-size: 30px 30px; border-left: 20px solid #2563eb; }
+    .chapter-slide { display: flex; flex-direction: column; justify-content: center; align-items: flex-start; padding-left: 150px; background-color: #f8fafc; border-left: 20px solid #2563eb; }
     .chapter-label { color: #3b82f6; font-size: 26px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 10px; }
     .chapter-title { color: #0f172a; font-size: 100px; font-weight: 800; margin: 0; line-height: 1.1; }
 
-    h2 { font-size: 55px; color: #1e3a8a; margin-top: 0; margin-bottom: 40px; display: inline-block; background: white; padding: 0 15px 0 0; }
-    h3 { font-size: 36px; color: #0f172a; margin-top: 10px; margin-bottom: 15px; border-bottom: 3px solid #bfdbfe; padding-bottom: 5px; display: inline-block; background: white; }
+    h2 { font-size: 55px; color: #1e3a8a; margin-top: 0; margin-bottom: 40px; display: inline-block; }
+    h3 { font-size: 36px; color: #0f172a; margin-top: 10px; margin-bottom: 15px; border-bottom: 3px solid #bfdbfe; padding-bottom: 5px; display: inline-block; }
     
-    .content-area { display: flex; gap: 70px; height: 100%; align-items: flex-start; position: relative; z-index: 2; }
+    .content-area { display: flex; gap: 70px; height: 100%; align-items: flex-start; }
     .col { flex: 1; display: flex; flex-direction: column; gap: 20px; }
     
     ul { margin: 0; padding-left: 40px; }
-    li { font-size: 26px; color: #334155; margin-bottom: 18px; line-height: 1.4; font-weight: 400; background: rgba(255,255,255,0.8); border-radius: 8px; }
+    li { font-size: 26px; color: #334155; margin-bottom: 18px; line-height: 1.4; font-weight: 400; }
     li strong { color: #0f172a; font-weight: 700; }
 
-    /* 3. COHESIVE IMAGE TINTING (BLUE WASH) */
-    .img-tint { position: relative; width: 100%; border-radius: 16px; box-shadow: 0 8px 25px rgba(0,0,0,0.15); overflow: hidden; }
-    .img-tint::after { content: ''; position: absolute; inset: 0; background: rgba(37, 99, 235, 0.25); mix-blend-mode: multiply; pointer-events: none; }
-    .img-tint img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    img { width: 100%; border-radius: 16px; object-fit: cover; box-shadow: 0 8px 25px rgba(0,0,0,0.1); }
     .img-main { height: 550px; }
     
-    /* 4. GRADIENT DATA REPORT STATISTIC BLOCKS */
+    /* DATA REPORT STATISTIC BLOCKS */
     .stat-grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; margin-top: 20px; }
     .stat-grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px; margin-top: 20px; width: 100%; }
-    .stat-box { background: rgba(255,255,255,0.95); padding: 35px; border-radius: 16px; border-top: 6px solid #2563eb; box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
-    .stat-num { font-size: 75px; font-weight: 800; margin-bottom: 10px; line-height: 1; background: linear-gradient(135deg, #1e3a8a 0%, #60a5fa 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-    .stat-title { font-size: 24px; font-weight: 800; color: #0f172a; margin-bottom: 10px; display: flex; align-items: center; gap: 10px; }
+    .stat-box { background: #f8fafc; padding: 35px; border-radius: 16px; border-top: 6px solid #2563eb; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+    .stat-num { font-size: 75px; font-weight: 800; color: #1d4ed8; margin-bottom: 10px; line-height: 1; }
+    .stat-title { font-size: 24px; font-weight: 800; color: #0f172a; margin-bottom: 10px; }
     .stat-text { font-size: 20px; color: #475569; line-height: 1.4; }
     
     .btn { display: block; width: 350px; margin: 0 auto 30px auto; padding: 20px; text-align: center; background: #2563eb; color: white; border: none; border-radius: 50px; font-size: 24px; font-weight: 700; cursor: pointer; box-shadow: 0 5px 20px rgba(37, 99, 235, 0.4); }
 
-    /* CRITICAL OVERLAP FIX & MARGIN NUKE */
+    /* CRITICAL OVERLAP FIX & MARGIN NUKE FOR MOBILE PRINTING */
     @media print {
         @page { size: 1600px 900px; margin: 0 !important; }
         html, body { background-color: #ffffff !important; display: block !important; margin: 0 !important; padding: 0 !important; }
-        .slide { background-color: #ffffff !important; display: block !important; width: 1600px !important; height: 900px !important; max-height: 900px !important; margin: 0 !important; padding: 80px 100px !important; border-radius: 0 !important; box-shadow: none !important; page-break-after: always !important; break-after: page !important; page-break-inside: avoid !important; }
-        .title-slide, .chapter-slide { display: flex !important; } 
+        .slide { 
+            background-color: #ffffff !important; display: block !important; width: 1600px !important; height: 900px !important; max-height: 900px !important; margin: 0 !important; padding: 80px 100px !important; border-radius: 0 !important; box-shadow: none !important; page-break-after: always !important; break-after: page !important; page-break-inside: avoid !important; 
+        }
+        /* Forces the new Title Slide layout in Print */
+        .title-slide { display: flex !important; flex-direction: row !important; align-items: center !important; }
+        .chapter-slide { display: flex !important; flex-direction: column !important; } 
         .content-area { display: flex !important; height: auto !important; }
         .stat-grid-4, .stat-grid-2 { display: grid !important; }
         .no-print { display: none !important; }
@@ -67,8 +63,14 @@
 <button class="btn no-print" onclick="window.print()">📥 Download PDF</button>
 
 <div class="slide title-slide">
-    <h1>RESEARCH PRESENTATION</h1>
-    <p>STUDY OF ARTIFICIAL INTELLIGENCE IN E-COMMERCE</p>
+    <div style="flex: 1; padding-right: 60px;">
+        <p style="font-size: 28px; color: #2563eb; font-weight: 800; letter-spacing: 3px; margin-bottom: 20px; margin-top: 0;">RESEARCH PRESENTATION</p>
+        <h1 style="font-size: 80px; color: #0f172a; font-weight: 800; line-height: 1.1; margin: 0; text-transform: uppercase;">STUDY OF ARTIFICIAL INTELLIGENCE IN E-COMMERCE</h1>
+        <div style="width: 100px; height: 8px; background: #2563eb; margin-top: 40px; border-radius: 4px;"></div>
+    </div>
+    <div style="flex: 1;">
+        <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80" style="height: 600px; border-radius: 24px; box-shadow: 0 15px 35px rgba(0,0,0,0.15);">
+    </div>
 </div>
 
 <div class="slide chapter-slide">
@@ -88,7 +90,7 @@
                 <li>Al has become a powerful tool that improves efficiency, innovation, and customer satisfaction.</li>
             </ul>
         </div>
-        <div class="col"><div class="img-tint img-main"><img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&q=80"></div></div>
+        <div class="col"><img class="img-main" src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&q=80"></div>
     </div>
 </div>
 
@@ -103,7 +105,7 @@
                 <li>By understanding what customers want, businesses provide highly personalized shopping.</li>
             </ul>
         </div>
-        <div class="col"><div class="img-tint img-main"><img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80"></div></div>
+        <div class="col"><img class="img-main" src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80"></div>
     </div>
 </div>
 
@@ -120,7 +122,7 @@
                 <li>This study focuses on how Al is used and the benefits it offers to both.</li>
             </ul>
         </div>
-        <div class="col"><div class="img-tint img-main"><img src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?auto=format&fit=crop&w=800&q=80"></div></div>
+        <div class="col"><img class="img-main" src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?auto=format&fit=crop&w=800&q=80"></div>
     </div>
 </div>
 
@@ -163,7 +165,7 @@
                 <li>It helps businesses compete in the growing online market.</li>
             </ul>
         </div>
-        <div class="col"><div class="img-tint img-main"><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80"></div></div>
+        <div class="col"><img class="img-main" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80"></div>
     </div>
 </div>
 
@@ -183,7 +185,7 @@
                 <li>These studies provide the essential background and foundation for the current research.</li>
             </ul>
         </div>
-        <div class="col"><div class="img-tint img-main"><img src="https://images.unsplash.com/photo-1532012197267-da84d127e765?auto=format&fit=crop&w=800&q=80"></div></div>
+        <div class="col"><img class="img-main" src="https://images.unsplash.com/photo-1532012197267-da84d127e765?auto=format&fit=crop&w=800&q=80"></div>
     </div>
 </div>
 
