@@ -3,40 +3,39 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI in E-Commerce PPT - BIG THEME</title>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<title>AI in E-Commerce PPT - Premium Dark Theme</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
 <style>
-    /* MASSIVE HIGH-RES LAYOUT */
-    body { font-family: 'Poppins', sans-serif; background: #cbd5e1; margin: 0; padding: 20px; display: flex; flex-direction: column; align-items: center; }
+    /* MASSIVE 1600x900 LAYOUT */
+    body { font-family: 'Poppins', sans-serif; background: #cbd5e1; margin: 0; padding: 20px; display: flex; flex-direction: column; align-items: center; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
     
     .slide { width: 1600px; height: 900px; background: white; margin-bottom: 30px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.15); box-sizing: border-box; padding: 80px 100px; overflow: hidden; position: relative; display: flex; flex-direction: column; }
     
-    /* THEME 1: DARK BLUE GRADIENT (Title) */
-    .title-slide { background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); color: white; justify-content: center; align-items: center; text-align: center; }
-    .title-slide h1 { font-family: 'Montserrat', sans-serif; font-size: 85px; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 2px; }
-    .title-slide p { font-size: 32px; color: #93c5fd; letter-spacing: 1px; font-weight: 400; text-transform: uppercase; }
+    /* THEME 1: BLUE GRADIENT TITLE SLIDE */
+    .title-slide { background: linear-gradient(135deg, #0b1120 0%, #1e3a8a 100%); color: white; justify-content: center; align-items: center; text-align: center; }
+    .title-slide h1 { font-size: 85px; margin-bottom: 20px; text-transform: uppercase; font-weight: 800; letter-spacing: 2px; line-height: 1.2; }
+    .title-slide p { font-size: 32px; color: #93c5fd; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
     
-    /* THEME 2: SOLID NAVY (Chapters) */
-    .chapter-slide { background: #0f172a; color: white; justify-content: center; padding-left: 150px; }
-    .chapter-slide p { color: #3b82f6; font-size: 36px; font-weight: 700; margin-bottom: 10px; letter-spacing: 3px; text-transform: uppercase; }
-    .chapter-slide h1 { font-family: 'Montserrat', sans-serif; font-size: 95px; margin: 0; }
+    /* THEME 2: EXACT MATCH FOR YOUR UPLOADED CHAPTER SCREENSHOT */
+    .chapter-slide { background: #0b1120; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; padding-left: 150px; }
+    .chapter-label { color: #3b82f6; font-size: 26px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 10px; }
+    .chapter-title { color: #ffffff; font-size: 100px; font-weight: 800; margin: 0; line-height: 1.1; }
 
     /* BIG CONTENT STYLES */
-    h2 { font-family: 'Montserrat', sans-serif; font-size: 54px; color: #0f172a; margin-top: 0; margin-bottom: 40px; }
-    h3 { font-size: 36px; color: #1e3a8a; margin-top: 10px; margin-bottom: 20px; }
+    h2 { font-size: 55px; color: #0b1120; margin-top: 0; margin-bottom: 40px; border-bottom: 4px solid #3b82f6; padding-bottom: 10px; display: inline-block; }
+    h3 { font-size: 38px; color: #1e3a8a; margin-top: 10px; margin-bottom: 20px; }
     
-    .content-area { display: flex; gap: 60px; height: 100%; align-items: flex-start; }
+    .content-area { display: flex; gap: 70px; height: 100%; align-items: flex-start; }
     .col { flex: 1; }
-    .col-img { flex: 1; display: flex; flex-direction: column; gap: 30px; }
     
     ul { margin: 0; padding-left: 40px; }
-    li { font-size: 28px; color: #334155; margin-bottom: 18px; line-height: 1.5; }
-    li strong { color: #0f172a; }
+    li { font-size: 28px; color: #1e293b; margin-bottom: 22px; line-height: 1.5; font-weight: 400; }
+    li strong { color: #0b1120; font-weight: 700; }
 
-    /* MORE BIG PICTURES */
+    /* BIG PICTURES */
     img { width: 100%; border-radius: 16px; object-fit: cover; box-shadow: 0 8px 25px rgba(0,0,0,0.1); }
-    .img-main { height: 500px; }
-    .img-half { height: 350px; }
+    .img-main { height: 550px; }
+    .img-half { height: 320px; margin-bottom: 20px; }
     
     .btn { display: block; width: 350px; margin: 0 auto 30px auto; padding: 20px; text-align: center; background: #2563eb; color: white; border: none; border-radius: 50px; font-size: 24px; font-weight: 700; cursor: pointer; box-shadow: 0 5px 20px rgba(37, 99, 235, 0.4); }
 
@@ -44,7 +43,7 @@
     @media print {
         @page { size: 1600px 900px; margin: 0 !important; }
         body { background: white !important; padding: 0 !important; margin: 0 !important; display: block !important; }
-        .slide { width: 1600px !important; height: 900px !important; margin: 0 !important; border-radius: 0 !important; box-shadow: none !important; page-break-after: always !important; display: flex !important; }
+        .slide { width: 1600px !important; height: 900px !important; margin: 0 !important; padding: 80px 100px !important; border-radius: 0 !important; box-shadow: none !important; page-break-after: always !important; display: flex !important; page-break-inside: avoid !important; }
         .no-print { display: none !important; }
     }
 </style>
@@ -59,8 +58,8 @@
 </div>
 
 <div class="slide chapter-slide">
-    <p>CHAPTER 1</p>
-    <h1>Introduction</h1>
+    <div class="chapter-label">CHAPTER 1</div>
+    <div class="chapter-title">Introduction</div>
 </div>
 
 <div class="slide">
@@ -75,7 +74,7 @@
                 <li>Al has become a powerful tool that improves efficiency, innovation, and customer satisfaction.</li>
             </ul>
         </div>
-        <div class="col-img"><img class="img-main" src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&q=80"></div>
+        <div class="col"><img class="img-main" src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&q=80"></div>
     </div>
 </div>
 
@@ -91,24 +90,24 @@
                 <li>By understanding what customers want, businesses provide highly personalized shopping.</li>
             </ul>
         </div>
-        <div class="col-img"><img class="img-main" src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80"></div>
+        <div class="col"><img class="img-main" src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80"></div>
     </div>
 </div>
 
 <div class="slide">
-    <h2>Introduction & Al in India</h2>
+    <h2>Al in Indian E-Commerce</h2>
     <div class="content-area">
         <div class="col">
             <ul>
-                <li>Al improves customer service through chatbots and provides voice/image search.</li>
                 <li>India has one of the fastest-growing digital economies in the world.</li>
                 <li>Millions of Indians now shop online due to affordable smartphones.</li>
+                <li>The government's initiatives like Digital India have also supported this digital growth.</li>
                 <li>In this competitive market, e-commerce companies use Al to reach urban and rural customers.</li>
-                <li>Al helps manage huge amounts of customer data and provides 24/7 support.</li>
+                <li>Al helps manage huge amounts of customer data and provides 24/7 support in local languages.</li>
                 <li>This study focuses on how Al is used and the benefits it offers to both.</li>
             </ul>
         </div>
-        <div class="col-img"><img class="img-main" src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?auto=format&fit=crop&w=800&q=80"></div>
+        <div class="col"><img class="img-main" src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?auto=format&fit=crop&w=800&q=80"></div>
     </div>
 </div>
 
@@ -151,13 +150,13 @@
                 <li>It helps businesses compete in the growing online market.</li>
             </ul>
         </div>
-        <div class="col-img"><img class="img-main" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80"></div>
+        <div class="col"><img class="img-main" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80"></div>
     </div>
 </div>
 
 <div class="slide chapter-slide">
-    <p>CHAPTER 2</p>
-    <h1>Review of Literature</h1>
+    <div class="chapter-label">CHAPTER 2</div>
+    <div class="chapter-title">Review of Literature</div>
 </div>
 
 <div class="slide">
@@ -171,7 +170,7 @@
                 <li>These studies provide the essential background and foundation for the current research.</li>
             </ul>
         </div>
-        <div class="col-img"><img class="img-main" src="https://images.unsplash.com/photo-1532012197267-da84d127e765?auto=format&fit=crop&w=800&q=80"></div>
+        <div class="col"><img class="img-main" src="https://images.unsplash.com/photo-1532012197267-da84d127e765?auto=format&fit=crop&w=800&q=80"></div>
     </div>
 </div>
 
@@ -247,8 +246,8 @@
 </div>
 
 <div class="slide chapter-slide">
-    <p>CHAPTER 3</p>
-    <h1>Role and Significance<br>of Al in E-Commerce</h1>
+    <div class="chapter-label">CHAPTER 3</div>
+    <div class="chapter-title">Role & Significance<br>of Al in E-Commerce</div>
 </div>
 
 <div class="slide">
@@ -263,7 +262,7 @@
                 <li>Overall, Al makes online shopping smarter, faster, and more convenient.</li>
             </ul>
         </div>
-        <div class="col-img"><img class="img-main" src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80"></div>
+        <div class="col"><img class="img-main" src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80"></div>
     </div>
 </div>
 
@@ -274,16 +273,21 @@
             <h3>Personalized Shopping Experience</h3>
             <ul>
                 <li>Al analyzes customer behavior and purchase history.</li>
-                <li>Platforms like Amazon, Flipkart, and Myntra recommend products based on preferences.</li>
+                <li>Platforms like Amazon, Flipkart, and Myntra recommend products.</li>
+                <li>Recommendations are based on customer preferences.</li>
                 <li>This improves shopping experience, customer satisfaction, and repeat purchases.</li>
             </ul>
+        </div>
+        <div class="col">
             <h3>Customer Support (24/7)</h3>
             <ul>
-                <li>Al chatbots provide instant service and answer queries anytime in different languages.</li>
-                <li>Customers do not need to wait, improving convenience.</li>
+                <li>Al chatbots provide instant customer service.</li>
+                <li>Virtual assistants answer queries anytime.</li>
+                <li>Support is available in different languages.</li>
+                <li>Customers do not need to wait for help.</li>
+                <li>This improves convenience and accessibility.</li>
             </ul>
         </div>
-        <div class="col-img"><img class="img-main" src="https://images.unsplash.com/photo-1533750516457-a7f992034fec?auto=format&fit=crop&w=800&q=80"></div>
     </div>
 </div>
 
@@ -293,18 +297,18 @@
         <div class="col">
             <h3>Fraud Detection and Security</h3>
             <ul>
-                <li>Al helps detect suspicious transactions, unusual purchasing patterns, fake reviews, and fraud.</li>
-                <li>This makes payments safer and increases customer trust.</li>
+                <li>Al helps detect suspicious transactions and unusual purchasing patterns.</li>
+                <li>Al detects fake reviews and fraud activities.</li>
+                <li>This makes online payments safer and increases customer trust.</li>
             </ul>
-            <h3>3.2 Impact: Improvement in Experience</h3>
+            <h3>3.2 Impact: Customer Experience</h3>
             <ul>
                 <li>Al makes online shopping faster and easier.</li>
-                <li>Provides personalized product recommendations and 24/7 chatbots.</li>
                 <li>Improves search results even with spelling mistakes.</li>
                 <li>Speeds up payments, order tracking, and returns.</li>
             </ul>
         </div>
-        <div class="col-img"><img class="img-main" src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=800&q=80"></div>
+        <div class="col"><img class="img-main" src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=800&q=80"></div>
     </div>
 </div>
 
@@ -390,12 +394,12 @@
                 <li>Data collected through online forms and interactions.</li>
             </ul>
         </div>
-        <div class="col-img"><img class="img-main" src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=800&q=80"></div>
+        <div class="col"><img class="img-main" src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=800&q=80"></div>
     </div>
 </div>
 <div class="slide chapter-slide">
-    <p>CHAPTER 4</p>
-    <h1>Data Analysis &<br>Interpretation</h1>
+    <div class="chapter-label">CHAPTER 4</div>
+    <div class="chapter-title">Data Analysis &<br>Interpretation</div>
 </div>
 
 <div class="slide">
@@ -490,8 +494,8 @@
 </div>
 
 <div class="slide chapter-slide">
-    <p>CHAPTER 5</p>
-    <h1>Findings, Suggestions<br>& Conclusion</h1>
+    <div class="chapter-label">CHAPTER 5</div>
+    <div class="chapter-title">Findings, Suggestions<br>& Conclusion</div>
 </div>
 
 <div class="slide">
@@ -532,12 +536,12 @@
         </div>
         <div class="col">
             <h3>Future Expectations</h3>
+            <img class="img-half" src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=800&q=80">
             <ul>
                 <li>Smart Price Comparisons (54.1%)</li>
                 <li>Immersive Virtual Try-ons (44.5%)</li>
                 <li>Instant Chatbots (37%)</li>
             </ul>
-            <img class="img-half" src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=800&q=80">
         </div>
     </div>
 </div>
@@ -577,7 +581,7 @@
                 <li>Overall impact of Al is highly positive despite challenges regarding data privacy and implementation.</li>
             </ul>
         </div>
-        <div class="col-img"><img class="img-main" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80"></div>
+        <div class="col"><img class="img-main" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80"></div>
     </div>
 </div>
 
