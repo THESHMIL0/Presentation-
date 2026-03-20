@@ -5,22 +5,33 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AI in E-Commerce Presentation</title>
 <style>
-    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; background: #f1f5f9; margin: 0; padding: 15px; color: #1e293b; }
-    .slide { background: white; max-width: 900px; margin: 0 auto 25px auto; padding: 35px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.08); page-break-after: always; break-inside: avoid; }
-    .title-slide { background: #0f172a; color: white; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; min-height: 300px; }
-    h1 { font-size: 34px; margin-bottom: 10px; line-height: 1.3; }
-    h2 { font-size: 26px; color: #2563eb; border-bottom: 2px solid #e2e8f0; padding-bottom: 10px; margin-bottom: 20px; }
-    h3 { font-size: 20px; color: #334155; margin-top: 20px; margin-bottom: 10px; }
-    ul { margin: 0; padding-left: 20px; }
-    li { font-size: 17px; margin-bottom: 10px; line-height: 1.5; }
-    img { width: 100%; height: 260px; object-fit: cover; border-radius: 8px; margin-bottom: 20px; }
-    .btn { display: block; width: 100%; max-width: 280px; margin: 0 auto 20px auto; padding: 16px; text-align: center; background: #2563eb; color: white; border: none; border-radius: 8px; font-size: 18px; font-weight: bold; cursor: pointer; }
+    /* PREMIUM CORPORATE THEME */
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap');
+    
+    body { font-family: 'Open Sans', sans-serif; background: #e2e8f0; margin: 0; padding: 20px; color: #1e293b; display: flex; flex-direction: column; align-items: center; }
+    
+    .slide { background: #ffffff; width: 100%; max-width: 1000px; min-height: 562px; margin: 0 auto 30px auto; padding: 50px 70px; border-radius: 16px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); box-sizing: border-box; }
+    
+    .title-slide { background: linear-gradient(135deg, #1e3a8a, #3b82f6); color: white; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
+    
+    h1 { font-family: 'Montserrat', sans-serif; font-size: 42px; margin-bottom: 15px; font-weight: 700; line-height: 1.2; }
+    h2 { font-family: 'Montserrat', sans-serif; font-size: 32px; color: #1d4ed8; border-bottom: 3px solid #bfdbfe; padding-bottom: 10px; margin-bottom: 25px; }
+    h3 { font-family: 'Montserrat', sans-serif; font-size: 22px; color: #334155; margin-top: 20px; margin-bottom: 12px; }
+    
+    ul { margin: 0; padding-left: 25px; }
+    li { font-size: 18px; margin-bottom: 12px; line-height: 1.6; }
+    
+    img { width: 100%; height: 280px; object-fit: cover; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+    
+    .btn { display: block; width: 100%; max-width: 300px; margin: 0 auto 20px auto; padding: 18px; text-align: center; background: #1d4ed8; color: white; border: none; border-radius: 50px; font-size: 18px; font-weight: 600; cursor: pointer; box-shadow: 0 4px 15px rgba(29, 78, 216, 0.4); }
+
+    /* ULTIMATE MOBILE PDF PRINT FIX - NO MORE GAPS! */
     @media print {
-        @page { margin: 0; size: landscape; }
-        body { background: white; padding: 0; }
-        .slide { box-shadow: none; margin: 0; padding: 40px 60px; border-radius: 0; width: 100%; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; }
-        .title-slide { min-height: 100vh; }
-        .no-print { display: none; }
+        @page { size: landscape; margin: 0 !important; }
+        body { background: white !important; padding: 0 !important; margin: 0 !important; display: block !important; }
+        .slide { width: 100% !important; max-width: none !important; height: 100vh !important; min-height: 100vh !important; margin: 0 !important; padding: 5% 8% !important; box-shadow: none !important; border-radius: 0 !important; page-break-after: always !important; break-after: page !important; page-break-inside: avoid !important; display: flex !important; flex-direction: column !important; justify-content: center !important; }
+        .slide:last-of-type { page-break-after: auto !important; break-after: auto !important; }
+        .no-print { display: none !important; }
     }
 </style>
 </head>
@@ -30,7 +41,7 @@
 
 <div class="slide title-slide">
     <h1>RESEARCH PRESENTATION</h1>
-    <p style="font-size: 22px; color: #93c5fd;">STUDY OF ARTIFICIAL INTELLIGENCE IN E-COMMERCE</p>
+    <p style="font-size: 22px; color: #bfdbfe; font-family: 'Montserrat', sans-serif;">STUDY OF ARTIFICIAL INTELLIGENCE IN E-COMMERCE</p>
 </div>
 
 <div class="slide">
@@ -46,7 +57,7 @@
 </div>
 
 <div class="slide">
-    <h2>Introduction</h2>
+    <h2>Introduction (Continued)</h2>
     <ul>
         <li>E-commerce, or electronic commerce, refers to buying and selling goods and services over the internet.</li>
         <li>Over the years, online platforms have changed traditional shopping methods.</li>
