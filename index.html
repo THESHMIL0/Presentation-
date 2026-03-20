@@ -3,58 +3,68 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI in E-Commerce PPT - Premium Report Style</title>
+<title>AI in E-Commerce PPT - Ultimate Premium Report</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
 <style>
     /* MASSIVE 1600x900 PREMIUM WHITE DATA REPORT THEME */
     html, body { background-color: #f1f5f9; margin: 0; padding: 0; width: 100%; height: 100%; }
-    body { font-family: 'Poppins', sans-serif; display: flex; flex-direction: column; align-items: center; padding: 20px 0; -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; color: #1e293b; }
+    body { font-family: 'Poppins', sans-serif; display: flex; flex-direction: column; align-items: center; padding: 20px 0; -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; color: #1e293b; counter-reset: pageNum; }
     
-    .slide { width: 1600px; height: 900px; background-color: #ffffff; margin-bottom: 30px; border-radius: 16px; box-shadow: 0 10px 35px rgba(0,0,0,0.08); box-sizing: border-box; padding: 80px 100px; overflow: hidden; position: relative; display: flex; flex-direction: column; }
+    .slide { width: 1600px; height: 900px; background-color: #ffffff; background-image: radial-gradient(#cbd5e1 2px, transparent 2px); background-size: 30px 30px; margin-bottom: 30px; border-radius: 16px; box-shadow: 0 10px 35px rgba(0,0,0,0.08); box-sizing: border-box; padding: 80px 100px; overflow: hidden; position: relative; display: flex; flex-direction: column; }
     
-    /* TITLE SLIDE: PURE WHITE WITH A HERO IMAGE */
-    .title-slide { background-color: #ffffff; border-top: 20px solid #2563eb; flex-direction: row; align-items: center; justify-content: space-between; text-align: left; }
+    .slide::after { counter-increment: pageNum; content: "Study of AI in E-Commerce  |  Page " counter(pageNum); position: absolute; bottom: 35px; left: 100px; font-size: 16px; color: #94a3b8; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; }
+    .title-slide::after { content: none; }
+
+    .title-slide { background-color: #ffffff; border-top: 20px solid #2563eb; flex-direction: row; align-items: center; justify-content: space-between; text-align: left; background-image: none; }
     
     .chapter-slide { display: flex; flex-direction: column; justify-content: center; align-items: flex-start; padding-left: 150px; background-color: #f8fafc; border-left: 20px solid #2563eb; }
     .chapter-label { color: #3b82f6; font-size: 26px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 10px; }
-    
-    /* ALL HEADINGS ARE NOW FORCED TO BIG LETTERS (ALL-CAPS) */
     .chapter-title { color: #0f172a; font-size: 100px; font-weight: 800; margin: 0; line-height: 1.1; text-transform: uppercase; }
-    h2 { font-size: 55px; color: #1e3a8a; margin-top: 0; margin-bottom: 40px; display: inline-block; text-transform: uppercase; letter-spacing: 1px; }
-    h3 { font-size: 36px; color: #0f172a; margin-top: 10px; margin-bottom: 15px; border-bottom: 3px solid #bfdbfe; padding-bottom: 5px; display: inline-block; text-transform: uppercase; letter-spacing: 1px; }
+
+    h2 { font-size: 55px; color: #1e3a8a; margin-top: 0; margin-bottom: 40px; display: inline-block; text-transform: uppercase; letter-spacing: 1px; background: white; padding-right: 20px; }
+    h3 { font-size: 36px; color: #0f172a; margin-top: 10px; margin-bottom: 15px; border-bottom: 3px solid #bfdbfe; padding-bottom: 5px; display: inline-block; text-transform: uppercase; letter-spacing: 1px; background: white; }
     
-    .content-area { display: flex; gap: 70px; height: 100%; align-items: flex-start; }
+    .content-area { display: flex; gap: 70px; height: 100%; align-items: flex-start; position: relative; z-index: 2; }
     .col { flex: 1; display: flex; flex-direction: column; gap: 20px; }
     
-    ul { margin: 0; padding-left: 40px; }
-    li { font-size: 26px; color: #334155; margin-bottom: 18px; line-height: 1.4; font-weight: 400; }
-    li strong { color: #0f172a; font-weight: 700; }
+    /* PREMIUM LISTS */
+    .premium-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 15px; }
+    .premium-list li { background: rgba(255,255,255,0.95); padding: 20px 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.04); display: flex; align-items: flex-start; gap: 15px; font-size: 24px; color: #334155; line-height: 1.4; border: 1px solid #f1f5f9; }
+    .premium-list li::before { content: '🔹'; font-size: 24px; margin-top: 2px; }
+    .premium-list li strong { color: #0f172a; font-weight: 700; }
 
-    img { width: 100%; border-radius: 16px; object-fit: cover; box-shadow: 0 8px 25px rgba(0,0,0,0.1); }
+    /* PREMIUM TEXT CARDS */
+    .card-grid-1 { display: grid; grid-template-columns: 1fr; gap: 25px; width: 100%; }
+    .text-card { background: rgba(255,255,255,0.95); padding: 30px; border-radius: 16px; border-left: 6px solid #2563eb; box-shadow: 0 6px 20px rgba(0,0,0,0.06); }
+    .text-card h4 { margin: 0 0 12px 0; font-size: 28px; color: #1e3a8a; text-transform: uppercase; display: flex; align-items: center; gap: 10px; }
+    .text-card p { margin: 0; font-size: 22px; color: #475569; line-height: 1.5; }
+
+    .img-tint { position: relative; width: 100%; border-radius: 16px; box-shadow: 0 8px 25px rgba(0,0,0,0.15); overflow: hidden; }
+    .img-tint::after { content: ''; position: absolute; inset: 0; background: rgba(37, 99, 235, 0.25); mix-blend-mode: multiply; pointer-events: none; }
+    .img-tint img { width: 100%; height: 100%; object-fit: cover; display: block; }
     .img-main { height: 550px; }
     
     /* DATA REPORT STATISTIC BLOCKS */
     .stat-grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; margin-top: 20px; }
     .stat-grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px; margin-top: 20px; width: 100%; }
-    .stat-box { background: #f8fafc; padding: 35px; border-radius: 16px; border-top: 6px solid #2563eb; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
-    .stat-num { font-size: 75px; font-weight: 800; color: #1d4ed8; margin-bottom: 10px; line-height: 1; }
-    .stat-title { font-size: 24px; font-weight: 800; color: #0f172a; margin-bottom: 10px; text-transform: uppercase; }
+    .stat-box { background: rgba(255,255,255,0.95); padding: 35px; border-radius: 16px; border-top: 6px solid #2563eb; box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
+    .stat-num { font-size: 75px; font-weight: 800; margin-bottom: 10px; line-height: 1; background: linear-gradient(135deg, #1e3a8a 0%, #60a5fa 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .stat-title { font-size: 24px; font-weight: 800; color: #0f172a; margin-bottom: 10px; text-transform: uppercase; display: flex; align-items: center; gap: 10px; }
     .stat-text { font-size: 20px; color: #475569; line-height: 1.4; }
     
     .btn { display: block; width: 350px; margin: 0 auto 30px auto; padding: 20px; text-align: center; background: #2563eb; color: white; border: none; border-radius: 50px; font-size: 24px; font-weight: 700; cursor: pointer; box-shadow: 0 5px 20px rgba(37, 99, 235, 0.4); }
 
-    /* CRITICAL OVERLAP FIX & MARGIN NUKE FOR MOBILE PRINTING */
+    /* CRITICAL OVERLAP FIX & MARGIN NUKE */
     @media print {
         @page { size: 1600px 900px; margin: 0 !important; }
         html, body { background-color: #ffffff !important; display: block !important; margin: 0 !important; padding: 0 !important; }
-        .slide { 
-            background-color: #ffffff !important; display: block !important; width: 1600px !important; height: 900px !important; max-height: 900px !important; margin: 0 !important; padding: 80px 100px !important; border-radius: 0 !important; box-shadow: none !important; page-break-after: always !important; break-after: page !important; page-break-inside: avoid !important; 
-        }
+        .slide { background-color: #ffffff !important; display: block !important; width: 1600px !important; height: 900px !important; max-height: 900px !important; margin: 0 !important; padding: 80px 100px !important; border-radius: 0 !important; box-shadow: none !important; page-break-after: always !important; break-after: page !important; page-break-inside: avoid !important; }
         .title-slide { display: flex !important; flex-direction: row !important; align-items: center !important; }
         .chapter-slide { display: flex !important; flex-direction: column !important; } 
         .content-area { display: flex !important; height: auto !important; }
-        .stat-grid-4, .stat-grid-2 { display: grid !important; }
+        .stat-grid-4, .stat-grid-2, .card-grid-1 { display: grid !important; }
         .no-print { display: none !important; }
+        .text-card, .premium-list li { break-inside: avoid !important; page-break-inside: avoid !important; }
     }
 </style>
 </head>
@@ -82,22 +92,21 @@
     <h2>Introduction</h2>
     <div class="content-area">
         <div class="col">
-            <ul>
+            <ul class="premium-list">
                 <li>Artificial Intelligence (AI) is one of the most important technologies in the digital era.</li>
                 <li>Al enables machines to perform tasks that usually require human intelligence, like learning, reasoning, and decision-making.</li>
                 <li>Al is being used in many sectors such as healthcare, education, finance, and entertainment.</li>
-                <li>However, one of the major sectors transformed by Al is E-commerce.</li>
-                <li>Al has become a powerful tool that improves efficiency, innovation, and customer satisfaction.</li>
+                <li>However, one of the major sectors entirely transformed by Al is E-commerce.</li>
             </ul>
         </div>
-        <div class="col"><img class="img-main" src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&q=80"></div>
+        <div class="col"><div class="img-tint img-main"><img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&q=80"></div></div>
     </div>
 </div>
 
 <div class="slide">
     <div class="content-area">
         <div class="col">
-            <ul>
+            <ul class="premium-list">
                 <li>E-commerce refers to buying and selling goods and services over the internet.</li>
                 <li>With platforms like Amazon, Flipkart, Myntra, and Meesho, customers shop anytime and anywhere.</li>
                 <li>As the global e-commerce industry grows, businesses look for new ways to attract customers.</li>
@@ -105,7 +114,7 @@
                 <li>By understanding what customers want, businesses provide highly personalized shopping.</li>
             </ul>
         </div>
-        <div class="col"><img class="img-main" src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80"></div>
+        <div class="col"><div class="img-tint img-main"><img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80"></div></div>
     </div>
 </div>
 
@@ -113,16 +122,15 @@
     <h2>Al in Indian E-Commerce</h2>
     <div class="content-area">
         <div class="col">
-            <ul>
+            <ul class="premium-list">
                 <li>India has one of the fastest-growing digital economies in the world.</li>
                 <li>Millions of Indians now shop online due to affordable smartphones.</li>
                 <li>The government's initiatives like Digital India have also supported this digital growth.</li>
                 <li>In this competitive market, e-commerce companies use Al to reach urban and rural customers.</li>
                 <li>Al helps manage huge amounts of customer data and provides 24/7 support in local languages.</li>
-                <li>This study focuses on how Al is used and the benefits it offers to both.</li>
             </ul>
         </div>
-        <div class="col"><img class="img-main" src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?auto=format&fit=crop&w=800&q=80"></div>
+        <div class="col"><div class="img-tint img-main"><img src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?auto=format&fit=crop&w=800&q=80"></div></div>
     </div>
 </div>
 
@@ -131,7 +139,7 @@
     <div class="content-area">
         <div class="col">
             <h3>Key Objectives</h3>
-            <ul>
+            <ul class="premium-list">
                 <li>To study the role of Al in personalized shopping experiences.</li>
                 <li>To assess future opportunities of Al in e-commerce.</li>
                 <li>To analyze customer satisfaction with websites.</li>
@@ -141,7 +149,7 @@
         </div>
         <div class="col">
             <h3>Scope of the Study</h3>
-            <ul>
+            <ul class="premium-list">
                 <li>Al studies customer searches and purchases.</li>
                 <li>Al provides personalized product recommendations.</li>
                 <li>Al chatbots answer queries instantly.</li>
@@ -157,15 +165,15 @@
     <div class="content-area">
         <div class="col">
             <h3>Why This Study Matters</h3>
-            <ul>
-                <li>Studying Artificial Intelligence in Indian E-commerce is important.</li>
+            <ul class="premium-list">
+                <li>Studying Artificial Intelligence in Indian E-commerce is crucially important.</li>
                 <li>It changes how businesses operate and how consumers shop online.</li>
                 <li>India has a fast-growing digital economy and internet users.</li>
                 <li>Al plays a key role in improving efficiency and customer experience.</li>
-                <li>It helps businesses compete in the growing online market.</li>
+                <li>It helps businesses compete in the rapidly growing online market.</li>
             </ul>
         </div>
-        <div class="col"><img class="img-main" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80"></div>
+        <div class="col"><div class="img-tint img-main"><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80"></div></div>
     </div>
 </div>
 
@@ -178,14 +186,14 @@
     <h2>Introduction to Literature Review</h2>
     <div class="content-area">
         <div class="col">
-            <ul>
+            <ul class="premium-list">
                 <li>The literature review examines previous studies on the use of Artificial Intelligence in e-commerce.</li>
                 <li>It shows how Al technologies like chatbots and recommendation systems help businesses understand customer behavior.</li>
                 <li>It explores improvements to the overall online shopping experience.</li>
                 <li>These studies provide the essential background and foundation for the current research.</li>
             </ul>
         </div>
-        <div class="col"><img class="img-main" src="https://images.unsplash.com/photo-1532012197267-da84d127e765?auto=format&fit=crop&w=800&q=80"></div>
+        <div class="col"><div class="img-tint img-main"><img src="https://images.unsplash.com/photo-1532012197267-da84d127e765?auto=format&fit=crop&w=800&q=80"></div></div>
     </div>
 </div>
 
@@ -193,22 +201,20 @@
     <h2>Literature Review: Studies 1 & 2</h2>
     <div class="content-area">
         <div class="col">
-            <h3>Anli Suresh (2022) - Findings</h3>
-            <ul>
-                <li>Studied the influence of Al on consumer preferences.</li>
-                <li>Data collected from 100 respondents.</li>
-                <li>Voice shopping and virtual assistants affect decisions.</li>
-                <li>Makes shopping personalized and convenient.</li>
-            </ul>
+            <div class="card-grid-1">
+                <div class="text-card">
+                    <h4>Anli Suresh (2022)</h4>
+                    <p>Studied the influence of Al on consumer preferences with data collected from 100 respondents. Concluded that voice shopping and virtual assistants heavily affect buying decisions, making shopping personalized and convenient.</p>
+                </div>
+            </div>
         </div>
         <div class="col">
-            <h3>Richard Fedorko et al. (2022)</h3>
-            <ul>
-                <li>Studied Al's role in online consumer behavior.</li>
-                <li>Uses recommendation systems and predictive analytics.</li>
-                <li>Helps companies target customers with products.</li>
-                <li>Improves efficiency in online shopping.</li>
-            </ul>
+            <div class="card-grid-1">
+                <div class="text-card" style="border-left-color: #8b5cf6;">
+                    <h4>Richard Fedorko et al. (2022)</h4>
+                    <p>Studied Al's role in influencing online consumer behavior. Found that Al uses recommendation systems and predictive analytics to help companies target customers with products, improving efficiency.</p>
+                </div>
+            </div>
         </div>
     </div>
 </div>
@@ -385,7 +391,7 @@
     <h2>Research Methodology</h2>
     <div class="content-area">
         <div class="col">
-            <h3 style="margin-bottom: 5px;">The study utilizes two core data streams:</h3>
+            <h3 style="margin-bottom: 5px;">Data Collection Streams</h3>
             <div class="card-grid-1">
                 <div class="text-card" style="border-left-color: #2563eb; padding: 20px 30px;">
                     <h4>📝 Primary Data</h4>
@@ -577,22 +583,103 @@
 </div>
 
 <div class="slide">
+    <h2>Key Research Findings</h2>
+    <div class="content-area">
+        <div class="col">
+            <h3>General Insights</h3>
+            <div class="card-grid-1">
+                <div class="text-card" style="border-left-color: #3b82f6;">
+                    <h4>🌍 Industry Transformation</h4>
+                    <p>Al is clearly and demonstrably improving how e-commerce platforms operate on a fundamental level. Most users are young (18-30), mainly students, and are aware that Al is actively used.</p>
+                </div>
+                <div class="text-card" style="border-left-color: #8b5cf6;">
+                    <h4>⚡ Enhanced Convenience</h4>
+                    <p>Users unanimously agree that Al integration makes online shopping faster, easier, and significantly more convenient overall.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <h3>Experience & Habits</h3>
+            <div class="card-grid-1">
+                <div class="text-card" style="border-left-color: #10b981;">
+                    <h4>⏰ Time-Saving Features</h4>
+                    <p>Automated recommendations and instant chatbots are the most valued features for saving consumer time, leading to mostly satisfied experiences.</p>
+                </div>
+                <div class="text-card" style="border-left-color: #f59e0b;">
+                    <h4>🛍️ Shopping Priorities</h4>
+                    <p>Shopping remains largely occasional or planned monthly. Product quality still reigns as the top priority, but delivery speed and support actively affect satisfaction.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="slide">
+    <h2>Limitations of the Study</h2>
+    <p style="font-size: 24px; color: #475569; margin-bottom: 20px; background: white; padding-right: 20px;">Every research study operates within certain boundaries. The key limitations of this data analysis include:</p>
+    <div class="card-grid-1" style="display: grid; grid-template-columns: repeat(2, 1fr);">
+        <div class="text-card" style="border-left-color: #ef4444;">
+            <h4>📍 Geographic Sample Size</h4>
+            <p>The study is based on a localized sample of only 150 respondents primarily located in Goa, which may limit broader national generalization.</p>
+        </div>
+        <div class="text-card" style="border-left-color: #f59e0b;">
+            <h4>🧑‍🎓 Demographic Skew</h4>
+            <p>The majority of the respondents are young adults and students (18-30 years), meaning older demographics are heavily underrepresented.</p>
+        </div>
+        <div class="text-card" style="border-left-color: #3b82f6;">
+            <h4>🧠 Subjective Bias</h4>
+            <p>Survey responses rely on self-reporting, which inherently includes personal biases, varying tech literacy, and subjective perceptions of Al.</p>
+        </div>
+        <div class="text-card" style="border-left-color: #8b5cf6;">
+            <h4>⏳ Rapid Tech Changes</h4>
+            <p>Al evolves rapidly; therefore, consumer perceptions and the tools available may shift significantly shortly after this data was collected.</p>
+        </div>
+    </div>
+</div>
+
+<div class="slide">
+    <h2>Strategic Suggestions</h2>
+    <div class="content-area">
+        <div class="col">
+            <h3>For General Improvement</h3>
+            <ul class="premium-list">
+                <li><strong>Data Transparency:</strong> Explicitly improve data privacy policies so users know exactly how their data is used.</li>
+                <li><strong>Security Monitoring:</strong> Utilize highly secure payment systems and continuously audit Al for fraud detection.</li>
+                <li><strong>Hybrid Support:</strong> Combine automated Al with human support to resolve complex customer grievances effectively.</li>
+                <li><strong>Skill Development:</strong> Upgrade Al systems and train skilled professionals to manage them.</li>
+            </ul>
+        </div>
+        <div class="col">
+            <h3>For Businesses</h3>
+            <ul class="premium-list">
+                <li><strong>Start Simple:</strong> Small businesses should first integrate basic Al tools like recommendation engines.</li>
+                <li><strong>Scale Up:</strong> Progressively add voice search, visual search, and smarter immersive features.</li>
+                <li><strong>Logistics:</strong> Deploy Al not just for front-end sales, but to optimize backend supply chain and delivery routing.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="slide">
     <h2>Conclusion</h2>
     <div class="content-area">
         <div class="col">
-            <h3>Strategic Takeaway</h3>
-            <div class="stat-box" style="padding: 25px;">
-                <div class="stat-text">Al is universally accepted as a vital tool for speed and operational efficiency.</div>
-                <div class="stat-text" style="margin-top: 15px;">However, to convert "Neutral" users into highly "Satisfied" brand advocates, platforms must urgently focus on elevating recommendation accuracy while building absolute transparency around user data security.</div>
+            <div class="card-grid-1">
+                <div class="text-card" style="border-left-color: #10b981; padding: 40px;">
+                    <h4 style="font-size: 32px; margin-bottom: 20px;">A Complete Transformation</h4>
+                    <p style="font-size: 24px;">Al is completely transforming the e-commerce industry from the ground up. It drastically improves personalization, operational efficiency, and the overall customer experience.</p>
+                </div>
+                <div class="text-card" style="border-left-color: #3b82f6; padding: 40px;">
+                    <h4 style="font-size: 32px; margin-bottom: 20px;">The Future Outlook</h4>
+                    <p style="font-size: 24px;">By helping businesses deeply understand their consumers, the overall impact of Al is highly positive—despite ongoing challenges regarding data privacy, security, and technical implementation.</p>
+                </div>
             </div>
-            <h3 style="margin-top: 20px;">Suggestions for Businesses</h3>
-            <ul class="premium-list">
-                <li>Improve data privacy and transparency.</li>
-                <li>Small businesses should start with basic Al tools.</li>
-                <li>Upgrade Al systems and train skilled professionals.</li>
-            </ul>
         </div>
-        <div class="col"><div class="img-tint" style="height: 600px;"><img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" style="height: 100%;"></div></div>
+        <div class="col">
+            <div class="img-tint" style="height: 600px;">
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" style="height: 100%;">
+            </div>
+        </div>
     </div>
 </div>
 
